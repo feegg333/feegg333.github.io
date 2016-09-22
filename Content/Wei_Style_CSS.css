@@ -1,0 +1,160 @@
+﻿@media screen and (min-width: 992px) {
+    i.fa.fa-arrows-v {
+        margin-left: 61px;
+    }
+
+    #Autobiography p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    section {
+        text-align: center;
+    }
+
+    #Autobiography p {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .live-tile.two-tall,
+    .list-tile.two-tall,
+    .copy-tile.two-tall,
+    .tile-strip .flip-list > li.two-tall {
+        height: 340px;
+    }
+}
+
+
+body {
+    font-family: 'Noto Sans TC';
+    padding-top: 32px;
+    min-width:360px;
+}
+
+#navbarImg {
+    margin-top: -10px;
+    width: 38px;
+    opacity: 0.6;
+    transition: opacity .3s ease-in-out;
+}
+
+    #navbarImg:hover {
+        opacity: 1;
+    }
+
+
+.myCenter {
+    text-align: center;
+}
+
+.myMargin {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.myPadding {
+    padding: 10px 20px 20px 20px;
+}
+
+.my_de_Padding {
+    padding: 10px 20px 20px 20px;
+}
+
+#WeiImg {
+    opacity: 0.5;
+    transition: opacity .3s ease-in-out;
+}
+
+    #WeiImg:hover {
+        opacity: 0.9;
+    }
+
+#About {
+    color: #e5e5e5;
+}
+
+.bgcolor {
+    padding: 15px;
+    background-color: #222222;
+}
+
+section {
+    margin: 50px;
+}
+
+.tooltip {
+    font-size: 14px;
+}
+
+span.glyphicon {
+    font-size: 16px;
+}
+
+#Skill {
+    text-align: center;
+}
+
+.more, 
+.myMail {
+    color: #444444;
+    transition: color .3s ease-in-out;
+}
+
+    .more:hover,
+    .myMail:hover  {
+        color: #ff12b9;
+    }
+
+#more_details {
+    display: none;
+}
+
+/* customized metro*/
+.live-tile.three-wide,
+.list-tile.three-wide,
+.copy-tile.three-wide,
+.tile-strip .flip-list > li.three-wide {
+    width: 100%;
+}
+
+.metroBig,
+.metroExtraLarge,
+.face.metroBig,
+.face.metroExtraLarge,
+.live-tile .metroExtraLarge {
+    font-size: 3.5em;
+    line-height: 2em;
+}
+
+p.metroExtraLarge span {
+    font-size: 0.4em;
+}
+
+#Autobiography p {
+    color: #3c3c3c;
+    font-family: 'Noto Sans TC','Microsoft JhengHei';
+}
+
+.navbar-inverse {
+    text-align: center;
+    color: #a8a8a8;
+}
+
+#Portfolio img {
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom:20px;
+    transition: filter .5s ease-in-out;
+}
+
+#Portfolio img:hover {
+  filter: none; /* IE6-9 */
+  -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+ transition: filter .5s ease-in-out;
+}
