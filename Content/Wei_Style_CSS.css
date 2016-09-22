@@ -31,7 +31,7 @@
 body {
     font-family: 'Noto Sans TC';
     padding-top: 32px;
-    min-width:360px;
+    min-width: 360px;
 }
 
 #navbarImg {
@@ -97,16 +97,32 @@ span.glyphicon {
     text-align: center;
 }
 
-.more, 
+.more,
 .myMail {
     color: #444444;
     transition: color .3s ease-in-out;
 }
 
     .more:hover,
-    .myMail:hover  {
+    .myMail:hover {
         color: #ff12b9;
     }
+
+#more_a i {
+    cursor: pointer;
+     -webkit-animation: myShack 5s infinite; /* Chrome, Safari, Opera */
+    animation: myShack 0.4s infinite;
+}
+@-webkit-keyframes myShack {
+   from {transform:scaleX(1)}
+    to {transform:scaleX(1.2)}
+}
+
+@keyframes mymove { 
+   from {transform:scaleX(1)}
+    to {transform:scaleX(1.2)}
+}
+
 
 #more_details {
     display: none;
@@ -144,12 +160,8 @@ p.metroExtraLarge span {
 }
 
 #Portfolio img {
- 
     -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
     box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
-    margin-bottom:20px;
-  
+    margin-bottom: 20px;
 }
-
-
