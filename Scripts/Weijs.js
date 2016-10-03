@@ -55,10 +55,10 @@
     });
 
   
-    $(function () {
-        $("[data-toggle='tooltip']").tooltip();
-    });
-
+    
+    $("[data-toggle='tooltip']").tooltip();
+ 
+    
     $(".live-tile").liveTile();
 
 
@@ -80,3 +80,6 @@ $("#more_a").click(function () {
     });
 
 });
+
+//my console.log
+console.log("%cWei's Info", "color:white;padding:10px;background-color:#222222;font-size:5em;");
