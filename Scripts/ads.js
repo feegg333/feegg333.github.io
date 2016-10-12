@@ -16,7 +16,6 @@
             width: "162",
             height: "602",
         }, 1500);
-        $("#Ads").attr("src", "");
         $("#Ads").attr("src", "https://feegg333.github.io/RWD_Ads");
     });
 
@@ -25,7 +24,6 @@
             width: "730",
             height: "92",
         }, 1500);
-        $("#Ads").attr("src", "");
         $("#Ads").attr("src", "https://feegg333.github.io/RWD_Ads");
     });
 
@@ -34,7 +32,6 @@
             width: "338",
             height: "282",
         }, 1500);
-        $("#Ads").attr("src", "");
         $("#Ads").attr("src", "https://feegg333.github.io/RWD_Ads");
     });
 
@@ -43,7 +40,6 @@
             width: "302",
             height: "602",
         }, 1500);
-        $("#Ads").attr("src", "");
         $("#Ads").attr("src", "https://feegg333.github.io/RWD_Ads");
     });
 
