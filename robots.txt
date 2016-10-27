@@ -1,0 +1,4 @@
+# www.robotstxt.org/
+
+User-agent: *
+Sitemap: http://ouch1978.github.io/sitemap.xml

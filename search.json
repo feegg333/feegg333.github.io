@@ -1,0 +1,85 @@
+[
+  
+    {
+      "title"    : "React -『Hello World!』",
+      "category" : "React",
+      "tags"     : "React",
+      "url"      : "/2016/10/27/learning-react-hello-world-lesson-1/",
+      "date"     : "2016-10-27 18:00:00 +0800",
+      "content"   : "[\n  {% for post in site.posts %}\n    {\n      \"title\"    : \"{{ post.title | escape }}\",\n      \"category\" : \"{{ post.category }}\",\n      \"tags\"     : \"{{ post.tags | join: ', ' }}\",\n      \"url\"      : \"{{ site.baseurl }}{{ post.url }}\",\n      \"date\"     : \"{{ post.date }}\",\n      \"content\"   : {{ page.content | jsonify }}\n    } {% unless forloop.last %},{% endunless %}\n  {% endfor %}\n  ,\n  {% for page in site.pages %}\n   {\n     {% if page.title != nil %}\n        \"title\"    : \"{{ page.title | escape }}\",\n        \"category\" : \"{{ page.category }}\",\n        \"tags\"     : \"{{ page.tags | join: ', ' }}\",\n        \"url\"      : \"{{ site.baseurl }}{{ page.url }}\",\n        \"date\"     : \"{{ page.date }}\",\n       \"content\"   : {{ page.content | jsonify }}\n     {% endif %}\n   } {% unless forloop.last %},{% endunless %}\n  {% endfor %}\n]\n"
+    } 
+  
+  ,
+  
+   {
+     
+        "title"    : "找不到網頁",
+        "category" : "",
+        "tags"     : "",
+        "url"      : "/404.html",
+        "date"     : "",
+       "content"   : "<p><img src=\"https://feegg333.github.io//images/hmfaysal-404.jpg\" alt=\"找不到網頁 at Wei Liu\" /></p>\n\n<div class=\"text-center\">\n\t<h1>先講結論</h1>\n\t<p>如果不是有人打錯網址，不然就是這一頁真的不存在。</p>\n  <p>會看到這一頁的話應該不是偶然的。</p>\n  <p>我公開的呼籲，如果你一直看到這一頁的話，請快點讓我知道。</p>\n</div>\n"
+     
+   } ,
+  
+   {
+     
+        "title"    : "文章分類索引",
+        "category" : "",
+        "tags"     : "Categories",
+        "url"      : "/categories/index.html",
+        "date"     : "",
+       "content"   : "<ul class=\"tag-box inline\">\n\n  \n    \n      <li><a href=\"#React\">React <span>1</span></a></li>\n    \n  \n\n</ul>\n\n\n  <h2 id=\"React\">React</h2>\n  <ul class=\"post-list\">\n    \n    \n      \n      \n      <li><a href=\"https://feegg333.github.io//2016/10/27/learning-react-hello-world-lesson-1/\">React -『Hello World!』<span class=\"entry-date\"><time datetime=\"2016-10-27T18:00:00+08:00\" itemprop=\"datePublished\">October 27, 2016</time></a></li>\n      \n      \n    \n    \n    \n  </ul>\n\n"
+     
+   } ,
+  
+   {
+     
+        "title"    : "精選文章",
+        "category" : "",
+        "tags"     : "",
+        "url"      : "/featured/",
+        "date"     : "",
+       "content"   : "\n<ul class=\"post-list\">\n\n\n\n</ul>\n\n<div class=\"notepad-page-title row\">\n    <h1>精選文章難產中…</h1>\n</div>\n\n"
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+        "title"    : "BLOG",
+        "category" : "",
+        "tags"     : "",
+        "url"      : "/",
+        "date"     : "",
+       "content"   : "\n\t\n    <article class=\"notepad-index-post post row\">\n        <div class=\"small-12 medium-3 large-2 columns datetime\">\n            <span class=\"notepad-post-meta\">\n                <time datetime=\"2016-10-27T18:00:00+08:00\">\n                    <span class=\"day\">\n                        27\n                    </span>\n                    <span class=\"month-year\">\n                        October 2016\n                    </span>\n                </time>\n            </span>\n        </div>\n        <div class=\"small-12 medium-9 large-10 columns\">\n            <header class=\"notepad-post-header\">\n                <h3 class=\"notepad-post-title\">\n                    <a href=\"https://feegg333.github.io//2016/10/27/learning-react-hello-world-lesson-1/\">\n                        React -『Hello World!』\n                    </a>\n                </h3>\n            </header>\n            <section class=\"notepad-post-excerpt\">\n                <p>在電腦螢幕上輸出「Hello, World!」（意為「世界，你好！」）這行字串的電腦程式。一般來說，這是每一種電腦程式語言中最基本、最簡單的程式，亦通常是初學者所編寫的第一個程式。</p>\n            </section>\n\n                <div class=\"notepad-index-post-tags\">\n                <a href=\"https://feegg333.github.io//categories/index.html#React\" title=\"其它與 React 相關的文章\">React</a>\n\n                </div>\n\n        </div>\n    </article>\n\t\n    <nav class=\"pagination\" role=\"navigation\">\n    \n    <span class=\"newer-posts faded\"><i class=\"fa fa-chevron-left\"></i> 較新</span>\n    \n\n    <span class=\"page-number\">第 1 頁，共 1 頁</span>\n    \t\n    \t<span class=\"older-posts faded\">較舊 <i class=\"fa fa-chevron-right\"></i></span>\n    \t\n\t</nav>\n\n"
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+   } ,
+  
+   {
+     
+        "title"    : "Tag Index",
+        "category" : "",
+        "tags"     : "",
+        "url"      : "/tags/index.html",
+        "date"     : "",
+       "content"   : "<ul class=\"tag-box inline\">\n{% assign tags_list = site.tags %}  \n  {% if tags_list.first[0] == null %}\n    {% for tag in tags_list %} \n    \t<li><a href=\"#{{ tag }}\">{{ tag | capitalize }} <span>{{ site.tags[tag].size }}</span></a></li>\n    {% endfor %}\n  {% else %}\n    {% for tag in tags_list %} \n    \t<li><a href=\"#{{ tag[0] }}\">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a></li>\n    {% endfor %}\n  {% endif %}\n{% assign tags_list = nil %}\n</ul>\n\n{% for tag in site.tags %} \n\t<h2 id=\"{{ tag[0] }}\">{{ tag[0] | capitalize }}</h2>\n\t<ul class=\"post-list\">\n\t\t{% assign pages_list = tag[1] %}  \n\t\t{% for post in pages_list %}\n\t\t\t{% if post.title != null %}\n\t\t\t{% if group == null or group == post.group %}\n\t\t\t<li><a href=\"{{ site.url }}{{ post.url }}\">{{ post.title }}<span class=\"entry-date\"><time datetime=\"{{ post.date | date_to_xmlschema }}\" itemprop=\"datePublished\">{{ post.date | date: \"%B %d, %Y\" }}</time></a></li>\n\t\t\t{% endif %}\n\t\t\t{% endif %}\n\t\t{% endfor %}\n\t\t{% assign pages_list = nil %}\n\t\t{% assign group = nil %}\n\t</ul>\n{% endfor %}"
+     
+   } 
+  
+]
