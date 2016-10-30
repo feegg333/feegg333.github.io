@@ -18,7 +18,7 @@
         "tags"     : "",
         "url"      : "/404.html",
         "date"     : "",
-       "content"   : "<p><img src=\"http://feegg333.github.io/images/hmfaysal-404.jpg\" alt=\"找不到網頁 at Wei Liu\" /></p>\n\n<div class=\"text-center\">\n\t<h1>先講結論</h1>\n\t<p>如果不是有人打錯網址，不然就是這一頁真的不存在。</p>\n  <p>會看到這一頁的話應該不是偶然的。</p>\n  <p>我公開的呼籲，如果你一直看到這一頁的話，請快點讓我知道。</p>\n</div>\n"
+       "content"   : "<p><img src=\"https://feegg333.github.io/images/hmfaysal-404.jpg\" alt=\"找不到網頁 at Wei Liu\" /></p>\n\n<div class=\"text-center\">\n\t<h1>先講結論</h1>\n\t<p>如果不是有人打錯網址，不然就是這一頁真的不存在。</p>\n  <p>會看到這一頁的話應該不是偶然的。</p>\n  <p>我公開的呼籲，如果你一直看到這一頁的話，請快點讓我知道。</p>\n</div>\n"
      
    } ,
   
@@ -29,7 +29,7 @@
         "tags"     : "Categories",
         "url"      : "/categories/index.html",
         "date"     : "",
-       "content"   : "<ul class=\"tag-box inline\">\n\n  \n    \n      <li><a href=\"#React\">React <span>1</span></a></li>\n    \n  \n\n</ul>\n\n\n  <h2 id=\"React\">React</h2>\n  <ul class=\"post-list\">\n    \n    \n      \n      \n      <li><a href=\"http://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1/\">React -『Hello World!』<span class=\"entry-date\"><time datetime=\"2016-10-27T18:00:00+08:00\" itemprop=\"datePublished\">October 27, 2016</time></a></li>\n      \n      \n    \n    \n    \n  </ul>\n\n"
+       "content"   : "<ul class=\"tag-box inline\">\n\n  \n    \n      <li><a href=\"#React\">React <span>1</span></a></li>\n    \n  \n\n</ul>\n\n\n  <h2 id=\"React\">React</h2>\n  <ul class=\"post-list\">\n    \n    \n      \n      \n      <li><a href=\"https://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1/\">React -『Hello World!』<span class=\"entry-date\"><time datetime=\"2016-10-27T18:00:00+08:00\" itemprop=\"datePublished\">October 27, 2016</time></a></li>\n      \n      \n    \n    \n    \n  </ul>\n\n"
      
    } ,
   
@@ -55,7 +55,7 @@
         "tags"     : "",
         "url"      : "/",
         "date"     : "",
-       "content"   : "\n\t\n    <article class=\"notepad-index-post post row\">\n        <div class=\"small-12 medium-3 large-2 columns datetime\">\n            <span class=\"notepad-post-meta\">\n                <time datetime=\"2016-10-27T18:00:00+08:00\">\n                    <span class=\"day\">\n                        27\n                    </span>\n                    <span class=\"month-year\">\n                        October 2016\n                    </span>\n                </time>\n            </span>\n        </div>\n        <div class=\"small-12 medium-9 large-10 columns\">\n            <header class=\"notepad-post-header\">\n                <h3 class=\"notepad-post-title\">\n                    <a href=\"http://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1/\">\n                        React -『Hello World!』\n                    </a>\n                </h3>\n            </header>\n            <section class=\"notepad-post-excerpt\">\n                <p>在電腦螢幕上輸出「Hello, World!」（意為「世界，你好！」）這行字串的電腦程式。一般來說，這是每一種電腦程式語言中最基本、最簡單的程式，亦通常是初學者所編寫的第一個程式。</p>\n            </section>\n\n                <div class=\"notepad-index-post-tags\">\n                <a href=\"http://feegg333.github.io/categories/index.html#React\" title=\"其它與 React 相關的文章\">React</a>\n\n                </div>\n\n        </div>\n    </article>\n\t\n    <nav class=\"pagination\" role=\"navigation\">\n    \n    <span class=\"newer-posts faded\"><i class=\"fa fa-chevron-left\"></i> 較新</span>\n    \n\n    <span class=\"page-number\">第 1 頁，共 1 頁</span>\n    \t\n    \t<span class=\"older-posts faded\">較舊 <i class=\"fa fa-chevron-right\"></i></span>\n    \t\n\t</nav>\n\n"
+       "content"   : "\n\t\n    <article class=\"notepad-index-post post row\">\n        <div class=\"small-12 medium-3 large-2 columns datetime\">\n            <span class=\"notepad-post-meta\">\n                <time datetime=\"2016-10-27T18:00:00+08:00\">\n                    <span class=\"day\">\n                        27\n                    </span>\n                    <span class=\"month-year\">\n                        October 2016\n                    </span>\n                </time>\n            </span>\n        </div>\n        <div class=\"small-12 medium-9 large-10 columns\">\n            <header class=\"notepad-post-header\">\n                <h3 class=\"notepad-post-title\">\n                    <a href=\"https://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1/\">\n                        React -『Hello World!』\n                    </a>\n                </h3>\n            </header>\n            <section class=\"notepad-post-excerpt\">\n                <p>在電腦螢幕上輸出「Hello, World!」（意為「世界，你好！」）這行字串的電腦程式。一般來說，這是每一種電腦程式語言中最基本、最簡單的程式，亦通常是初學者所編寫的第一個程式。</p>\n            </section>\n\n                <div class=\"notepad-index-post-tags\">\n                <a href=\"https://feegg333.github.io/categories/index.html#React\" title=\"其它與 React 相關的文章\">React</a>\n\n                </div>\n\n        </div>\n    </article>\n\t\n    <nav class=\"pagination\" role=\"navigation\">\n    \n    <span class=\"newer-posts faded\"><i class=\"fa fa-chevron-left\"></i> 較新</span>\n    \n\n    <span class=\"page-number\">第 1 頁，共 1 頁</span>\n    \t\n    \t<span class=\"older-posts faded\">較舊 <i class=\"fa fa-chevron-right\"></i></span>\n    \t\n\t</nav>\n\n"
      
    } ,
   
