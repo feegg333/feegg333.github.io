@@ -5,29 +5,29 @@
 
 <title type="text">Wei Liu</title>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
-<link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2016-10-27T21:34:21+08:00</updated>
-<id>https://feegg333.github.io/</id>
+<link rel="self" type="application/atom+xml" href="http://feegg333.github.io/feed.xml" />
+<link rel="alternate" type="text/html" href="http://feegg333.github.io/" />
+<updated>2016-10-30T18:32:12+08:00</updated>
+<id>http://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
-  <uri>https://feegg333.github.io/</uri>
+  <uri>http://feegg333.github.io/</uri>
   <email>riskyliu1220@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[React -『Hello World!』]]></title>
-  <link rel="alternate" type="text/html" href="https://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1/"/>
-  <id>https://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1</id>
+  <link rel="alternate" type="text/html" href="http://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1/"/>
+  <id>http://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1</id>
   <published>2016-10-27T18:00:00+08:00</published>
   <updated>2016-10-27T18:00:00+08:00</updated>
   <author>
     <name>Wei Liu (劉書瑋)</name>
-    <uri>https://feegg333.github.io</uri>
+    <uri>http://feegg333.github.io</uri>
     <email>riskyliu1220@gmail.com</email>
   </author>
-  <category scheme="https://feegg333.github.io/tags/#React" term="React" />
+  <category scheme="http://feegg333.github.io/tags/#React" term="React" />
   <content type="html">
   
     &lt;p&gt;這是寫程式的初心者一開始都必須做的事情啊…而且這是有典故的，來看看為什麼大家都會做這件事情吧!&lt;/p&gt;
@@ -168,7 +168,7 @@
 &lt;p&gt;下一篇文章將會詳細的解析程式內容。&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1/&quot;&gt;React -『Hello World!』&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on October 27, 2016.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1/&quot;&gt;React -『Hello World!』&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;http://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on October 27, 2016.&lt;/p&gt;</content>
 </entry>
 
 </feed>
