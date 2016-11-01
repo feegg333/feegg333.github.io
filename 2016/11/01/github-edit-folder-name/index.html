@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>如何刪除 GITHUB 上的資料夾 &vert; WEI LIU</title>
-<meta name="description" content="當你想要刪除 GitHub 上的資料夾時，卻不知道該怎麼刪除，跟著這篇文章做，就能夠成功的刪除 GitHub 上的資料夾嘍!">
+<title>如何修改 GITHUB 上的資料夾名稱 &vert; WEI LIU</title>
+<meta name="description" content="當你想要修改 GitHub 上的資料夾名稱，卻找不到哪邊能修改，來看看如何快速修改資料夾名稱吧!">
 <meta name="keywords" content="GitHub">
 
 
@@ -11,9 +11,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何刪除 GitHub 上的資料夾">
-<meta property="og:description" content="當你想要刪除 GitHub 上的資料夾時，卻不知道該怎麼刪除，跟著這篇文章做，就能夠成功的刪除 GitHub 上的資料夾嘍!">
-<meta property="og:url" content="https://feegg333.github.io/2016/11/01/github-delete-folder/">
+<meta property="og:title" content="如何修改 GitHub 上的資料夾名稱">
+<meta property="og:description" content="當你想要修改 GitHub 上的資料夾名稱，卻找不到哪邊能修改，來看看如何快速修改資料夾名稱吧!">
+<meta property="og:url" content="https://feegg333.github.io/2016/11/01/github-edit-folder-name/">
 <meta property="og:site_name" content="Wei Liu">
 <meta property="og:image" content="https://feegg333.github.io/images/cover3.jpg">
 
@@ -21,7 +21,7 @@
 
 
 
-<link rel="canonical" href="https://feegg333.github.io/2016/11/01/github-delete-folder/">
+<link rel="canonical" href="https://feegg333.github.io/2016/11/01/github-edit-folder-name/">
 <link href="https://feegg333.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Wei Liu Feed">
 
 
@@ -96,8 +96,8 @@
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                          <h1>如何刪除 GitHub 上的資料夾</h1>
-                          <p>by <strong>Wei Liu (劉書瑋)</strong> &#8212; on <strong><time datetime="2016-11-01T15:30:00+08:00">01 Nov 2016</time></strong></p>
+                          <h1>如何修改 GitHub 上的資料夾名稱</h1>
+                          <p>by <strong>Wei Liu (劉書瑋)</strong> &#8212; on <strong><time datetime="2016-11-01T18:30:00+08:00">01 Nov 2016</time></strong></p>
                           <p class="notepad-post-meta-simple-tags">Tag: <a href="https://feegg333.github.io/tags/index.html#GitHub" data-toggle="tooltip" title="Posts tagged with GitHub" rel="tag">GitHub</a> </p>
                         </div>
                     </div>
@@ -105,37 +105,33 @@
             </header>
 
         <article class="notepad-post-content post tag-simple">
-            <div><p>當你想要刪除 GitHub 上的資料夾時，卻發現怎麼也找不到刪除的地方，也不知道從何下手，請參考本篇文章，跟著做就能成功將資料夾刪除啦!</p>
+            <div><p>如同上一篇刪除 GitHub 上的資料夾，如果只是需要更改資料夾名稱，那就不用大費周章的刪除資料夾，又重新建立新的資料夾，打個指令就能夠輕鬆又快速的更改名稱嘍!</p>
 
-<p>會寫這篇文章是因為以前 GitHub 的版本似乎能夠直接更改資料夾名稱，或是做刪除的動作，但是現在怎麼找卻都找不著在哪邊能夠直接更改，因此使用指令的方式，即可快速地答道我們的目的，將GitHub 上的資料夾刪除。</p>
+<p>這次的目標就是要把 test02 這個資料夾名稱更改成為 test03。</p>
 
-<p>先來看看 GitHub 上面，為了Demo，先建立了兩個資料夾，分別是 test01 與 test02。</p>
+<p>之前先建立好了兩個資料夾，分別是 test01 與 test02。</p>
 
 <p><a href="https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_01.jpg"><img src="https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_01.jpg" alt=" GitHub 上面的檔案" title="GitHub 上面的檔案" /></a></p>
 
-<p>而這次的目標就是要把 test02 這個資料夾刪除。</p>
-
 <p>首先開啟自己習慣的 指令工具，這邊是使用 Git Shell。</p>
 
-<p>打指令前記得先檢查本機路徑是否正確指到要修改的 repository 路徑，確認路徑沒問題以後就可以開始打指令了。</p>
+<p>更改名稱指令，可用 git mv <old name=""> <new name="">，如下方所示：</new></old></p>
 
-<figure class="highlight"><pre><code class="language-linenos" data-lang="linenos">C:\github\delete-github-folder [master ≡ +1 ~0 -0 !]&gt;  git rm -r --cached test02</code></pre></figure>
+<figure class="highlight"><pre><code class="language-linenos" data-lang="linenos">C:\github\delete-github-folder [master ≡]&gt; git mv test02 test03</code></pre></figure>
 
-<p>輸入這項指令後，你會看到他已經把該資料夾內的檔案刪除，接著打上 commit。</p>
+<p>輸入這項指令後，你會看到他已經把該資料夾名稱從 test02 更改為 test03，接著別忘了打上 commit。</p>
 
-<figure class="highlight"><pre><code class="language-linenos" data-lang="linenos">a
+<figure class="highlight"><pre><code class="language-linenos" data-lang="linenos">C:\github\delete-github-folder [master ≡ +0 ~0 -2 | +1 ~0 -0 !]&gt; git commit -m 'change folder name test02 to test03'</code></pre></figure>
 
-C:\github\delete-github-folder [master ≡ +0 ~0 -2 | +1 ~0 -0 !]&gt; git commit -m 'remove folder'</code></pre></figure>
-
-<p>最後再使用 push 指令，任務就完成啦!</p>
+<p>最後別忘了使用 push 指令，任務才算完成!</p>
 
 <figure class="highlight"><pre><code class="language-linenos" data-lang="linenos"> C:\github\delete-github-folder [master ↑ +1 ~0 -0 !]&gt; git push origin master</code></pre></figure>
 
-<p>我們到 GitHub 上面看看， test02 資料夾已經成功被刪除了。</p>
+<p>我們到 GitHub 上面看看， test02 資料夾名稱已經被更改成為 test03 。</p>
 
-<p><a href="https://dl.dropbox.com/s/f47j2qjxaicqq69/2016-11-01_02.jpg"><img src="https://dl.dropbox.com/s/f47j2qjxaicqq69/2016-11-01_02.jpg" alt=" test02 資料夾已經被刪除" title="test02 資料夾已經被刪除" /></a></p>
+<p><a href="https://dl.dropbox.com/s/hgncnian3abs43o/2016-11-01_03.jpg"><img src="https://dl.dropbox.com/s/hgncnian3abs43o/2016-11-01_03.jpg" alt="資料夾名稱已經改為 test03" title="資料夾名稱已經改為 test03" /></a></p>
 
-<p>希望這篇文章可以幫助到想刪除 GitHub 上面的資料夾，卻不知道從何下手的朋友，下台一鞠躬。</p>
+<p>非常簡短的指令，就輕鬆改好 GitHub 上的資料夾名稱嘍。</p>
 
             </div>
         </article>
@@ -143,15 +139,15 @@ C:\github\delete-github-folder [master ≡ +0 ~0 -2 | +1 ~0 -0 !]&gt; git commit
         <div class="cf"></div>
         <div class="row text-center">
             <section class="notepad-post-share">
-                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;如何刪除 GitHub 上的資料夾&quot;%20https://feegg333.github.io/2016/11/01/github-delete-folder/%20via%20&#64;"
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;如何修改 GitHub 上的資料夾名稱&quot;%20https://feegg333.github.io/2016/11/01/github-edit-folder-name/%20via%20&#64;"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://feegg333.github.io/2016/11/01/github-delete-folder/"
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://feegg333.github.io/2016/11/01/github-edit-folder-name/"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
-                <a class="google-icon" href="https://plus.google.com/share?url=https://feegg333.github.io/2016/11/01/github-delete-folder/"
+                <a class="google-icon" href="https://plus.google.com/share?url=https://feegg333.github.io/2016/11/01/github-edit-folder-name/"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
                     <i class="fa fa-google-plus"></i>
                 </a>
@@ -162,10 +158,8 @@ C:\github\delete-github-folder [master ≡ +0 ~0 -2 | +1 ~0 -0 !]&gt; git commit
 
         <div class="PageNavigation">
           
-            <a class="prev" href="/2016/10/27/learning-react-hello-world-lesson-1/">&laquo; React -『Hello World!』</a>
+            <a class="prev" href="/2016/11/01/github-delete-folder/">&laquo; 如何刪除 GitHub 上的資料夾</a>
           
-          
-            <a class="next" href="/2016/11/01/github-edit-folder-name/">如何修改 GitHub 上的資料夾名稱 &raquo;</a>
           
         </div>
 

@@ -7,13 +7,60 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2016-11-01T17:28:08+08:00</updated>
+<updated>2016-11-01T21:13:44+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
   <uri>https://feegg333.github.io/</uri>
   <email>riskyliu1220@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[如何修改 GitHub 上的資料夾名稱]]></title>
+  <link rel="alternate" type="text/html" href="https://feegg333.github.io/2016/11/01/github-edit-folder-name/"/>
+  <id>https://feegg333.github.io/2016/11/01/github-edit-folder-name</id>
+  <published>2016-11-01T18:30:00+08:00</published>
+  <updated>2016-11-01T18:30:00+08:00</updated>
+  <author>
+    <name>Wei Liu (劉書瑋)</name>
+    <uri>https://feegg333.github.io</uri>
+    <email>riskyliu1220@gmail.com</email>
+  </author>
+  <category scheme="https://feegg333.github.io/tags/#GitHub" term="GitHub" />
+  <content type="html">
+  
+    &lt;p&gt;如同上一篇刪除 GitHub 上的資料夾，如果只是需要更改資料夾名稱，那就不用大費周章的刪除資料夾，又重新建立新的資料夾，打個指令就能夠輕鬆又快速的更改名稱嘍!&lt;/p&gt;
+
+&lt;p&gt;這次的目標就是要把 test02 這個資料夾名稱更改成為 test03。&lt;/p&gt;
+
+&lt;p&gt;之前先建立好了兩個資料夾，分別是 test01 與 test02。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_01.jpg&quot;&gt;&lt;img src=&quot;https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_01.jpg&quot; alt=&quot; GitHub 上面的檔案&quot; title=&quot;GitHub 上面的檔案&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;首先開啟自己習慣的 指令工具，這邊是使用 Git Shell。&lt;/p&gt;
+
+&lt;p&gt;更改名稱指令，可用 git mv &lt;old name=&quot;&quot;&gt; &lt;new name=&quot;&quot;&gt;，如下方所示：&lt;/new&gt;&lt;/old&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-linenos&quot; data-lang=&quot;linenos&quot;&gt;C:\github\delete-github-folder [master ≡]&amp;gt; git mv test02 test03&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;輸入這項指令後，你會看到他已經把該資料夾名稱從 test02 更改為 test03，接著別忘了打上 commit。&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-linenos&quot; data-lang=&quot;linenos&quot;&gt;C:\github\delete-github-folder [master ≡ +0 ~0 -2 | +1 ~0 -0 !]&amp;gt; git commit -m &#39;change folder name test02 to test03&#39;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;最後別忘了使用 push 指令，任務才算完成!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-linenos&quot; data-lang=&quot;linenos&quot;&gt; C:\github\delete-github-folder [master ↑ +1 ~0 -0 !]&amp;gt; git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;我們到 GitHub 上面看看， test02 資料夾名稱已經被更改成為 test03 。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dl.dropbox.com/s/hgncnian3abs43o/2016-11-01_03.jpg&quot;&gt;&lt;img src=&quot;https://dl.dropbox.com/s/hgncnian3abs43o/2016-11-01_03.jpg&quot; alt=&quot;資料夾名稱已經改為 test03&quot; title=&quot;資料夾名稱已經改為 test03&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;非常簡短的指令，就輕鬆改好 GitHub 上的資料夾名稱嘍。&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2016/11/01/github-edit-folder-name/&quot;&gt;如何修改 GitHub 上的資料夾名稱&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on November 01, 2016.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -38,7 +85,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_01.jpg&quot;&gt;&lt;img src=&quot;https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_01.jpg&quot; alt=&quot; GitHub 上面的檔案&quot; title=&quot;GitHub 上面的檔案&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;而這次的目標就是要把 Test02 這個資料夾刪除。&lt;/p&gt;
+&lt;p&gt;而這次的目標就是要把 test02 這個資料夾刪除。&lt;/p&gt;
 
 &lt;p&gt;首先開啟自己習慣的 指令工具，這邊是使用 Git Shell。&lt;/p&gt;
 
@@ -48,7 +95,9 @@
 
 &lt;p&gt;輸入這項指令後，你會看到他已經把該資料夾內的檔案刪除，接著打上 commit。&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-linenos&quot; data-lang=&quot;linenos&quot;&gt;C:\github\delete-github-folder [master ≡ +0 ~0 -2 | +1 ~0 -0 !]&amp;gt; git commit -m &#39;remove folder&#39;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-linenos&quot; data-lang=&quot;linenos&quot;&gt;a
+
+C:\github\delete-github-folder [master ≡ +0 ~0 -2 | +1 ~0 -0 !]&amp;gt; git commit -m &#39;remove folder&#39;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;最後再使用 push 指令，任務就完成啦!&lt;/p&gt;
 

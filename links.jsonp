@@ -8,6 +8,11 @@ callback([
   {
     "text": "如何刪除 GitHub 上的資料夾",
     "href": "https://feegg333.github.io/2016/11/01/github-delete-folder/"
+  } ,
+
+  {
+    "text": "如何修改 GitHub 上的資料夾名稱",
+    "href": "https://feegg333.github.io/2016/11/01/github-edit-folder-name/"
   } 
 
 ])
