@@ -7,13 +7,63 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2016-10-30T20:10:56+08:00</updated>
+<updated>2016-11-01T17:20:21+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
   <uri>https://feegg333.github.io/</uri>
   <email>riskyliu1220@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[如何刪除 GitHub 上的資料夾]]></title>
+  <link rel="alternate" type="text/html" href="https://feegg333.github.io/2016/11/01/github-delete-folder/"/>
+  <id>https://feegg333.github.io/2016/11/01/github-delete-folder</id>
+  <published>2016-11-01T15:30:00+08:00</published>
+  <updated>2016-11-01T15:30:00+08:00</updated>
+  <author>
+    <name>Wei Liu (劉書瑋)</name>
+    <uri>https://feegg333.github.io</uri>
+    <email>riskyliu1220@gmail.com</email>
+  </author>
+  <category scheme="https://feegg333.github.io/tags/#GitHub" term="GitHub" />
+  <content type="html">
+  
+    &lt;p&gt;當你想要刪除 GitHub 上的資料夾時，卻發現怎麼也找不到刪除的地方，也不知道從何下手，請參考本篇文章，跟著做就能成功將資料夾刪除啦!&lt;/p&gt;
+
+&lt;p&gt;會寫這篇文章是因為以前 GitHub 的版本似乎能夠直接更改資料夾名稱，或是做刪除的動作，但是現在怎麼找卻都找不著在哪邊能夠直接更改，因此使用指令的方式，即可快速地答道我們的目的，將GitHub 上的資料夾刪除。&lt;/p&gt;
+
+&lt;p&gt;先來看看 GitHub 上面，為了Demo，先建立了兩個資料夾，分別是 Test01 與 Test02。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_01.jpg&quot;&gt;&lt;img src=&quot;https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_01.jpg&quot; alt=&quot; GitHub 上面的檔案&quot; title=&quot;GitHub 上面的檔案&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;而這次的目標就是要把 Test02 這個資料夾刪除。&lt;/p&gt;
+
+&lt;p&gt;首先開啟自己習慣的 指令工具，這邊是使用 Git Shell。&lt;/p&gt;
+
+&lt;p&gt;打指令前記得先檢查本機路徑是否正確指到要修改的 repository 路徑，確認路徑沒問題以後就可以開始打指令了。&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-linenos&quot; data-lang=&quot;linenos&quot;&gt;C:\github\delete-github-folder [master ≡ +1 ~0 -0 !]&amp;gt;  git rm -r --cached test02&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;輸入這項指令後，你會看到他已經把該資料夾內的檔案刪除，接著打上 commit。&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-github&quot; data-lang=&quot;github&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;C:\github\delete-github-folder [master ≡ +0 ~0 -2 | +1 ~0 -0 !]&amp;gt; git commit -m &#39;remove folder&#39;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;最後再使用 push 指令，任務就完成啦!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-linenos&quot; data-lang=&quot;linenos&quot;&gt; C:\github\delete-github-folder [master ↑ +1 ~0 -0 !]&amp;gt; git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;我們到 GitHub 上面看看， test02 資料夾已經成功被刪除了。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_02.jpg&quot;&gt;&lt;img src=&quot;https://dl.dropbox.com/s/fjld77t8bm2kb6y/2016-11-01_02.jpg&quot; alt=&quot; test02 資料夾已經被刪除&quot; title=&quot;test02 資料夾已經被刪除&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;希望這篇文章可以幫助到想刪除 GitHub 上面的資料夾，卻不知道從何下手的朋友，下台一鞠躬。&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2016/11/01/github-delete-folder/&quot;&gt;如何刪除 GitHub 上的資料夾&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on November 01, 2016.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>

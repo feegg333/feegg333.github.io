@@ -3,6 +3,11 @@ callback([
   {
     "text": "React -『Hello World!』",
     "href": "https://feegg333.github.io/2016/10/27/learning-react-hello-world-lesson-1/"
+  } ,
+
+  {
+    "text": "如何刪除 GitHub 上的資料夾",
+    "href": "https://feegg333.github.io/2016/11/01/github-delete-folder/"
   } 
 
 ])
