@@ -20,7 +20,6 @@ html, body, .notepad-post-container, .notepad-post-header {
   font-size: 1.625rem;
   font-weight: 700;
   color: white;
-  text-transform: uppercase;
   letter-spacing: -0.0625rem; }
   .notepad-post-header-title a {
     color: white; }
