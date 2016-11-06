@@ -13,6 +13,11 @@ callback([
   {
     "text": "如何修改 GitHub 上的資料夾名稱",
     "href": "https://feegg333.github.io/2016/11/01/github-edit-folder-name/"
+  } ,
+
+  {
+    "text": "JavaScript Object Prototypes - 原型物件",
+    "href": "https://feegg333.github.io/2016/11/06/JavaScript-object-prototypes-01/"
   } 
 
 ])

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JAVASCRIPT OBJECT PROTOTYPES - 原型物件 &vert; WEI LIU</title>
+<meta name="description" content="在 JavaScript 中，如何定義原型物件? 來看看 JavaScript Object Prototypes 的基本介紹吧!">
+<meta name="keywords" content="javascript">
+
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Object Prototypes - 原型物件">
+<meta property="og:description" content="在 JavaScript 中，如何定義原型物件? 來看看 JavaScript Object Prototypes 的基本介紹吧!">
+<meta property="og:url" content="https://feegg333.github.io/2016/11/06/JavaScript-object-prototypes-01/">
+<meta property="og:site_name" content="Wei Liu">
+<meta property="og:image" content="https://feegg333.github.io/images/cover3.jpg">
+
+
+
+
+
+<link rel="canonical" href="https://feegg333.github.io/2016/11/06/JavaScript-object-prototypes-01/">
+<link href="https://feegg333.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Wei Liu Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link href='https://fonts.googleapis.com/earlyaccess/notosanstc.css' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,300,800,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://feegg333.github.io/assets/css/vendor/normalize.css">
+    <link rel="stylesheet" href="https://feegg333.github.io/assets/css/vendor/nprogress.css">
+    <link rel="stylesheet" href="https://feegg333.github.io/assets/css/vendor/foundation.min.css">
+    <link rel="stylesheet" href="https://feegg333.github.io/assets/css/style.css">
+    <link rel="stylesheet" href="https://feegg333.github.io/assets/css/post.css">
+    <link rel="stylesheet" href="https://feegg333.github.io/assets/css/syntax.css">
+
+
+
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://feegg333.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://feegg333.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://feegg333.github.io/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://feegg333.github.io/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://feegg333.github.io/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://feegg333.github.io/images/apple-touch-icon-144x144-precomposed.png">
+
+<style type="text/css">@media only screen and (min-width:43.75em){.notepad-post-content div>p:first-child:first-letter{float:left;font-size:4.688rem;line-height:4.375rem;padding-top:.25rem;padding-right:.5rem;padding-left:.188rem;font-weight:bold;color: #e51843;}}</style>
+</head>
+<body class="post-template" itemscope itemtype="http://schema.org/WebPage">
+
+        <main id="notepad-post-container-simple" class="notepad-post-container-simple" role="main">
+            <header class="notepad-post-header-simple">
+                <div class="notepad-post-menu-header-simple">
+
+                    <a class="notepad-blog-logo" href="https://feegg333.github.io">
+                        <img src="https://feegg333.github.io/images/logo.png" alt="Blog Logo" />
+                    </a>
+
+                <div class="notepad-blog-menu">
+    <div class="notepad-mobile-menu show-for-small">
+        <a href="#"><i class="fa fa-bars"></i></a>
+    </div>
+    <ul class="notepad-menu">
+        <li class="notepad-mobile-close-btn show-for-small text-right">
+            <a href="#"><i class="fa fa-times"></i></a>
+        </li>
+
+            <li>
+                    <a href="https://feegg333.github.io/">Blog</a>
+                 </li>
+
+            <li>
+                    <a href="https://feegg333.github.io/categories">Categories</a>
+                 </li>
+
+<li><a href="https://feegg333.github.io/about.html" title="About Wei Liu" target="_blank"><i class="icon-rss"></i>About</a></li>
+           <li><a href="https://feegg333.github.io/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i>RSS</a></li>
+    </ul>
+
+</div>
+            </div>
+
+                <div class="notepad-post-title-simple row">
+                    <div class="small-12 columns">
+                        <div class="notepad-post-meta-simple">
+                          <h1>JavaScript Object Prototypes - 原型物件</h1>
+                          <p>by <strong>Wei Liu (劉書瑋)</strong> &#8212; on <strong><time datetime="2016-11-06T22:30:00+08:00">06 Nov 2016</time></strong></p>
+                          <p class="notepad-post-meta-simple-tags">Tag: <a href="https://feegg333.github.io/tags/index.html#javascript" data-toggle="tooltip" title="Posts tagged with javascript" rel="tag">javascript</a> </p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <article class="notepad-post-content post tag-simple">
+            <div><p>說到物件，就一定要稍微提到物件導向的基本概念，物件導向是一種使用抽象化概念表達實體的程式設計模型。再進一步則是可以定義出一些共用的屬性與方法，提升重用（reuse）的程度。</p>
+
+<p>先來簡單講解一下 <strong><code>『抽象化概念表達實體』</code></strong> 的意思吧!「抽象化概念」顧名思義…就是頗抽象的，所以得透過舉例的方式來說明，其實網路上對於物件及物件導向有千百種解釋，這邊我就用我的方法解釋嘍，「抽象化概念」就像你看到外星人時，因為外星人不是我們腦海內已經擁有的物件，你就會用自己的方式去描述這個他，這就是抽象化概念，換個說法：抽象化概念就是你對一個物件的基本定義。</p>
+
+<p>舉例來說，當我要介紹我朋友(是一個人)給大家認識時，大家對他的一切都很陌生，完全不了解他，但是就算你們不認識他，至少你們也已經會知道，我這個朋友，大致上就是有兩個眼睛、一個鼻子、一個嘴巴、兩隻手、兩隻腳、用腳走路、用嘴吃飯…等等，只是有關於他的一切都還很抽象，在我還沒有把他正式的帶出來給大家認識以前，大概就只知道他是個「人」，而你腦海內浮出的「人」的基本原型，就是所謂的抽象化概念嘍。</p>
+
+<p><strong><code>『表達實體』</code></strong> 則是把抽象概念具體化，為了讓你們認識我的朋友，我把這位「人」帶到你們面前，介紹你們認識，實際認識了我朋友之後，你們對我的朋友有了更深的了解，你們就會自動把「人」實體化了，例如：</p>
+
+<p>他皮膚黑黑的。</p>
+
+<p>他身體胖胖的。</p>
+
+<p>他的興趣是唱歌。</p>
+
+<p>他常常打大雄。</p>
+
+<p>他是孩子王。</p>
+
+<p><a href="https://dl.dropbox.com/s/manpd1p0hngdnly/panwhoo.png"><img src="https://dl.dropbox.com/s/manpd1p0hngdnly/panwhoo.png" alt=" 胖虎 是你!?" title="胖虎 是你!?" /></a></p>
+
+<p>這就是一個抽象的人如何變成胖虎的故事…。</p>
+
+<p>看到這邊，當我下次又要介紹新朋友給大家認識時，大家腦海中又會再次浮出我朋友是個 <strong><code>『人』</code></strong> 這個抽象化概念，而實際見面認識以後，又會對這位新朋友有更具體的了解而把他具體化。</p>
+
+<p>因此 <strong><code>『人』</code></strong> 就是我們可以一直拿來重復實用的原型物件，而我介紹給大家認識的朋友就是繼承了 <strong><code>『人』</code></strong> 這個原型而具體化的物件，我想接下來就可以直接看 Code 來理解了。</p>
+
+<p>以下例子我們先簡單的定義 People 這個物件，有名字與性別與年齡。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">People</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gender</span> <span class="o">=</span> <span class="nx">gender</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>再來我要把這位 People 具體化了，例如他是我之前舉例的朋友一號-胖虎。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"myDemo"</span><span class="nt">&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">People</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gender</span> <span class="o">=</span> <span class="nx">gender</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">myFriend_01</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">People</span><span class="p">(</span><span class="s2">"胖虎"</span><span class="p">,</span> <span class="s2">"男孩"</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
+<span class="cm">/* 將 myFriend_01 的名字顯示在 myDemo 裡*/</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myDemo裡"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span>
+<span class="s2">"我的朋友是 "</span> <span class="o">+</span> <span class="nx">myFriend_01</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span><span class="s2">" 。"</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>以上就是自己定義原型物件以及將它實體化的簡單例子。</p>
+
+<p>當然我們可以新增屬性：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"myDemo"</span><span class="nt">&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">People</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">weight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gender</span> <span class="o">=</span> <span class="nx">gender</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">weight</span> <span class="o">=</span> <span class="nx">weight</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">myFriend_01</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">People</span><span class="p">(</span><span class="s2">"胖虎"</span><span class="p">,</span> <span class="s2">"男孩"</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">"100kg"</span><span class="p">);</span>
+<span class="cm">/* 將 myFriend_01 的名字及體重顯示在 myDemo 裡*/</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myDemo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span>
+<span class="s2">"我的朋友是 "</span> <span class="o">+</span> <span class="nx">myFriend_01</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span><span class="s2">"，"</span> <span class="o">+</span> <span class="s2">"體重是 "</span> <span class="o">+</span> <span class="nx">myFriend_01</span><span class="p">.</span><span class="nx">weight</span> <span class="o">+</span><span class="s2">"。"</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>接著我們也可以幫他加入一些行為方法(Method)：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"myDemo"</span><span class="nt">&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">People</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">weight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gender</span> <span class="o">=</span> <span class="nx">gender</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">weight</span> <span class="o">=</span> <span class="nx">weight</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* 在 console 印出 Hello*/</span>
+<span class="nx">People</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">logo</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">);</span>
+<span class="p">};</span>
+
+
+<span class="kd">var</span> <span class="nx">myFriend_01</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">People</span><span class="p">(</span><span class="s2">"胖虎"</span><span class="p">,</span> <span class="s2">"男孩"</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">"100kg"</span><span class="p">);</span>
+<span class="cm">/* 將 myFriend_01 的名字及體重顯示在 myDemo 裡*/</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myDemo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span>
+<span class="s2">"我的朋友是 "</span> <span class="o">+</span> <span class="nx">myFriend_01</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span><span class="s2">"，"</span> <span class="o">+</span> <span class="s2">"體重是 "</span> <span class="o">+</span> <span class="nx">myFriend_01</span><span class="p">.</span><span class="nx">weight</span> <span class="o">+</span><span class="s2">"。"</span><span class="p">;</span>
+
+<span class="nx">myFriend_01</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">();</span>
+
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>如果想知道目前物件的屬性與值，可以利用 for 迴圈來取得：</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"myDemo"</span><span class="nt">&gt;&lt;/p&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="kd">function</span> <span class="nx">People</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">weight</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">gender</span> <span class="o">=</span> <span class="nx">gender</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">weight</span> <span class="o">=</span> <span class="nx">weight</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* 在 console 印出 Hello*/</span>
+<span class="nx">People</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">logo</span><span class="p">(</span><span class="s1">'Hello'</span><span class="p">);</span>
+<span class="p">};</span>
+
+
+<span class="kd">var</span> <span class="nx">myFriend_01</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">People</span><span class="p">(</span><span class="s2">"胖虎"</span><span class="p">,</span> <span class="s2">"男孩"</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="s2">"100kg"</span><span class="p">);</span>
+<span class="cm">/* 將 myFriend_01 的名字及體重顯示在 myDemo 裡*/</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"myDemo"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span>
+<span class="s2">"我的朋友是 "</span> <span class="o">+</span> <span class="nx">myFriend_01</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span><span class="s2">"，"</span> <span class="o">+</span> <span class="s2">"體重是 "</span> <span class="o">+</span> <span class="nx">myFriend_01</span><span class="p">.</span><span class="nx">weight</span> <span class="o">+</span><span class="s2">"。"</span><span class="p">;</span>
+
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">prop</span> <span class="k">in</span> <span class="nx">myFriend_01</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">prop</span> <span class="o">+</span> <span class="s1">': '</span> <span class="o">+</span> <span class="nx">myFriend_01</span><span class="p">[</span><span class="nx">prop</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><a href="https://jsfiddle.net/1g68nez7/2/" title="jsfiddle 看完整程式碼">點此可以看完整程式碼結果</a></p>
+
+<p>點此可以看完整程式碼結果</p>
+
+<p>了解原型物件後，要新增具體的物件是不是輕鬆多了，這邊只是介紹基礎用法，希望對大家有幫助嘍。</p>
+
+            </div>
+        </article>
+
+        <div class="cf"></div>
+        <div class="row text-center">
+            <section class="notepad-post-share">
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;JavaScript Object Prototypes - 原型物件&quot;%20https://feegg333.github.io/2016/11/06/JavaScript-object-prototypes-01/%20via%20&#64;"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://feegg333.github.io/2016/11/06/JavaScript-object-prototypes-01/"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="google-icon" href="https://plus.google.com/share?url=https://feegg333.github.io/2016/11/06/JavaScript-object-prototypes-01/"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </section>
+        </div>
+
+        <div class="cf"></div>
+
+        <div class="PageNavigation">
+          
+            <a class="prev" href="/2016/11/01/github-edit-folder-name/">&laquo; 如何修改 GitHub 上的資料夾名稱</a>
+          
+          
+        </div>
+
+            <div class="notepad-author-info">
+                <div class="row">
+                    <section class="notepad-post-author small-12 columns">
+
+                            <img src="https://feegg333.github.io/images/Wei.jpg" class="notepad-post-author-avatar" alt="Wei Liu (劉書瑋)'s photo">
+
+                            <span class="author-label">作者</span>
+                            <h1>Wei Liu (劉書瑋)</h1>
+                            <h3>Front-End Developer</h3>
+                            <p>邁向前端的設計師</p>
+
+                    </section>
+                </div>
+            </div>
+
+
+        <div class="cf"></div>
+        
+        <section class="notepad-disqus row">
+    <div class="small-12 columns">
+        <h1 class="notepad-comments-header">Comments</h1>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'Wei1220'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+</section>
+
+        <div class="cf"></div>
+
+    <footer class="notepad-site-footer">
+    <div class="copyright">
+         <section>All content copyright <a href="https://feegg333.github.io/index">Wei Liu (劉書瑋)</a> &copy; 2016 &bull; All rights reserved.</section>
+         <section>Proudly published with <a class="icon-ghost" href="https://jekyllrb.com/">Jekyll</a></section>
+    </div>
+    <div class="social-icons">
+        
+		
+        
+        
+        
+        <a href="http://github.com/feegg333" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                <i class="fa fa-github fa-stack-1x"></i>
+            </span>
+        </a>
+        
+        
+		</div>
+
+    <div class="cf"></div>
+</footer>
+
+</main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="https://feegg333.github.io/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="https://feegg333.github.io/assets/js/vendor/modernizr.js"></script>
+    <script src="https://feegg333.github.io/assets/js/foundation.min.js"></script>
+    
+    <script src="https://feegg333.github.io/assets/js/notepad.js"></script>
+    <script src="https://feegg333.github.io/assets/js/scripts.min.js"></script>
+    <script src="https://feegg333.github.io/assets/js/vendor/nprogress.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/3.0.0/pangu.js"></script>
+
+    <script>
+      $(document).foundation();
+      pangu.spacingPage();
+    </script>
+
+
+<!-- Asynchronous Google Analytics snippet -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-85711153-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>
+
+<script>NProgress.start();var interval=setInterval(function(){NProgress.inc()},1000);jQuery(window).load(function(){clearInterval(interval);NProgress.done()});jQuery(window).unload(function(){NProgress.start()});</script>
+
+</body>
+</html>
