@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2016-11-07T02:07:43+08:00</updated>
+<updated>2016-11-07T02:18:12+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -250,7 +250,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;如果想知道目前物件的屬性與值，可以利用 for 迴圈來取得：&lt;/p&gt;
+&lt;p&gt;如果想知道目前物件的所有屬性與值，我們可以利用 for 迴圈來取得，程式碼如下：&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -325,9 +325,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://jsfiddle.net/1g68nez7/2/&quot; title=&quot;jsfiddle 看完整程式碼&quot;&gt;點此可以看完整程式碼結果&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;點此可以看完整程式碼結果&lt;/p&gt;
-
-&lt;p&gt;了解原型物件後，要新增具體的物件是不是輕鬆多了，這邊只是介紹基礎用法，希望對大家有幫助嘍。&lt;/p&gt;
+&lt;p&gt;根據這邊的簡單範例，因為基本的屬性都已經定義好了，所以以後要再增加新朋友這個物件的時候是不是覺得很方便阿，這邊只是介紹基礎用法，希望對大家有幫助嘍。&lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2016/11/06/JavaScript-object-prototypes-01/&quot;&gt;JavaScript Object Prototypes - 原型物件&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on November 06, 2016.&lt;/p&gt;</content>
