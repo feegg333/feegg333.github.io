@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2016-11-07T22:18:15+08:00</updated>
+<updated>2016-11-07T22:22:02+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -136,8 +136,9 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;以上就是自己定義原型物件以及使用他將他實體化的簡單例子。
-所以要建立朋友二號的時候，大家應該知道怎麼做了，程式碼如下：&lt;/p&gt;
+&lt;p&gt;以上就是自己定義原型物件以及使用他將他實體化的簡單例子。&lt;/p&gt;
+
+&lt;p&gt;所以要建立朋友二號的時候，大家應該都知道該怎麼做了，程式碼如下：&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -196,7 +197,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://jsfiddle.net/vucn95dy/&quot; target=&quot;_blank&quot; title=&quot;點此看程式碼範例&quot;&gt; 點此可以看程式碼範例 &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jsfiddle.net/vucn95dy/&quot; target=&quot;_blank&quot; title=&quot;點此看程式碼範例&quot;&gt;點此可以看程式碼範例&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;當然我們也可以為 Poeple 直接新增屬性，以下是給 Poeple 新增一個體重 (weight) 的屬性：&lt;/p&gt;
 
@@ -385,7 +386,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://jsfiddle.net/1g68nez7/2/&quot; title=&quot;jsfiddle 看程式碼範例&quot;&gt;點此可以看程式碼範例&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jsfiddle.net/1g68nez7/2/&quot; target=&quot;_blank&quot; title=&quot;點此看程式碼範例&quot;&gt;點此可以看程式碼範例&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;根據這邊的簡單範例，因為 People 的基本屬性都已經定義好了，以後要再增加新朋友時就很方便嘍，這邊只是介紹 Object Prototypes 的基礎用法，希望對大家有幫助。&lt;/p&gt;
 
