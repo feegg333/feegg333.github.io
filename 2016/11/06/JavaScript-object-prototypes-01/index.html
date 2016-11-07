@@ -105,13 +105,13 @@
             </header>
 
         <article class="notepad-post-content post tag-simple">
-            <div><p>說到物件，就一定要稍微提到物件導向的基本概念，物件導向是一種使用抽象化概念表達實體的程式設計模型。再進一步則是可以定義出一些共用的屬性與方法，提升重用（reuse）的程度。</p>
+            <div><p>說到物件，就一定要稍微提到物件導向的基本概念，物件導向是一種使用『抽象化概念表達實體』的程式設計模型，可以定義出一些共用的屬性與方法，提升重用（reuse）的程度。</p>
 
 <p>先來簡單講解一下 <strong><code>『抽象化概念表達實體』</code></strong> 的意思吧!「抽象化概念」顧名思義…就是頗抽象的，所以得透過舉例的方式來說明，其實網路上對於物件及物件導向有千百種解釋，這邊我就用我的方法解釋嘍，「抽象化概念」就像你看到外星人時，因為外星人不是我們腦海內已經擁有的物件，你就會用自己的方式去描述這個他，這就是抽象化概念，換個說法：抽象化概念就是你對一個物件的基本定義。</p>
 
 <p>舉例來說，當我要介紹我朋友(是一個人)給大家認識時，大家對他的一切都很陌生，完全不了解他，但是就算你們不認識他，至少你們也已經會知道，我這個朋友，大致上就是有兩個眼睛、一個鼻子、一個嘴巴、兩隻手、兩隻腳、用腳走路、用嘴吃飯…等等，只是有關於他的一切都還很抽象，在我還沒有把他正式的帶出來給大家認識以前，大概就只知道他是個「人」，而你腦海內浮出的「人」的基本原型，就是所謂的抽象化概念嘍。</p>
 
-<p><strong><code>『表達實體』</code></strong> 則是把抽象概念具體化，為了讓你們認識我的朋友，我把這位「人」帶到你們面前，介紹你們認識，實際認識了我朋友之後，你們對我的朋友有了更深的了解，你們就會自動把「人」實體化了，例如：</p>
+<p><strong><code>『實體』</code></strong> 則是把抽象概念具體化，為了讓你們認識我的朋友，我把這位「人」帶到你們面前，介紹你們認識，實際認識了我朋友之後，就不會再覺得他是抽象的，因為他是一個具體的人，例如：</p>
 
 <p>他皮膚黑黑的。</p>
 
@@ -129,7 +129,7 @@
 
 <p>看到這邊，當我下次又要介紹新朋友給大家認識時，大家腦海中又會再次浮出我朋友是個 <strong><code>『人』</code></strong> 這個抽象化概念，而實際見面認識以後，又會對這位新朋友有更具體的了解而把他具體化。</p>
 
-<p>因此 <strong><code>『人』</code></strong> 就是我們可以一直拿來重復實用的原型物件，而我介紹給大家認識的朋友就是繼承了 <strong><code>『人』</code></strong> 這個原型而具體化的物件，我想接下來就可以直接看 Code 來理解了。</p>
+<p>因此 <strong><code>『人』</code></strong> 就是我們可以一直拿來重復使用的原型物件，而我介紹給大家認識的朋友就是繼承了 <strong><code>『人』</code></strong> 這個原型而具體化後的物件，我想接下來就可以直接看 Code 來理解了。</p>
 
 <p>以下例子我們先簡單的定義 People 這個物件，有名字與性別與年齡。</p>
 
@@ -164,7 +164,8 @@
 <span class="nt">&lt;/html&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>再來我要把這位 People 具體化了，例如他是我之前舉例的朋友一號-胖虎。</p>
+<p>接著我要使用定義好的 People ，創造出一個人，把他實體化，例如他是我之前舉例的朋友一號-胖虎。
+<strong><code>『new』</code></strong>  一個 People，並且給他實際的值。</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -209,9 +210,9 @@
 <span class="nt">&lt;/html&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>以上就是自己定義原型物件以及將它實體化的簡單例子。</p>
+<p>以上就是自己定義原型物件以及使用他將他實體化的簡單例子。</p>
 
-<p>當然我們可以新增屬性：</p>
+<p>當然我們也可以為 Poeple 直接新增屬性，以下是給 Poeple 新增一個體重 (weight) 的屬性：</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -258,7 +259,7 @@
 <span class="nt">&lt;/html&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>接著我們也可以幫他加入一些行為方法(Method)：</p>
+<p>接著我們也可以幫他加入一些行為方法 (Method)，以下為幫 People 加一個 sayHello 的行為：</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -325,7 +326,7 @@
 <span class="nt">&lt;/html&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>如果想知道目前物件的所有屬性與值，我們可以利用 for 迴圈來取得，程式碼如下：</p>
+<p>如果我們想知道目前物件的所有屬性與值，可以利用 for 迴圈來取得，程式碼如下：</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -398,9 +399,9 @@
 <span class="nt">&lt;/html&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p><a href="https://jsfiddle.net/1g68nez7/2/" title="jsfiddle 看完整程式碼">點此可以看完整程式碼結果</a></p>
+<p><a href="https://jsfiddle.net/1g68nez7/2/" title="jsfiddle 看完整程式碼範例">點此可以看完整程式碼範例</a></p>
 
-<p>根據這邊的簡單範例，因為基本的屬性都已經定義好了，所以以後要再增加新朋友這個物件的時候是不是覺得很方便阿，這邊只是介紹基礎用法，希望對大家有幫助嘍。</p>
+<p>根據這邊的簡單範例，因為 People 的基本屬性都已經定義好了，以後要再增加新朋友時就很方便嘍，這邊只是介紹 Object Prototypes 的基礎用法，希望對大家有幫助。</p>
 
             </div>
         </article>
