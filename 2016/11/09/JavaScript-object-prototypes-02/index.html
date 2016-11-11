@@ -165,7 +165,7 @@
 <span class="nt">&lt;/script&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>接著就是要用到本篇文章開頭說提到的繼承了，英雄是遊戲裡的角色，但是目前角色只有名字這個屬性屬性，因此我們要把英雄的技能繫結到角色身上。
+<p>接著就是要用到本篇文章開頭說提到的繼承了，英雄是遊戲裡的角色，但是目前角色只有名字這個屬性，因此我們要讓角色繼承英雄的四個技能，這樣接下來我們建立英雄角色的時候，就可以直接使用英雄技能了。
 這裡使用  Object.create() 方法。</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
@@ -217,7 +217,7 @@
 <span class="nt">&lt;/script&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>接下來我們就能夠開心的創造出實體的英雄角色了，我們先創造出兩個英雄，易大師以及卡特蓮娜吧!</p>
+<p>接下來我們就能夠開心的創造出實體的英雄角色了，就先創造出兩個英雄角色，易大師以及卡特蓮娜吧!</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -274,7 +274,7 @@
 <span class="nt">&lt;/script&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>這樣就差不多完成了，為了驗證創造出來的英雄，是兩個不同的角色，但可以使用共通的技能。因此 HTML 的部分，我們就用下拉式選單讓玩家可以選擇英雄，再搭配四個技能(Q、W、E、R)的按鈕，在畫面上顯示出哪個角色使用了哪個技能。</p>
+<p>這樣就差不多完成了，為了驗證創造出來的是兩個不同的英雄角色，但可以使用共通的技能。因此 HTML 的部分，我們就用下拉式選單讓玩家可以選擇英雄，再搭配四個技能(Q、W、E、R)的按鈕，在畫面上顯示出哪個角色使用了哪個技能。</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2

@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2016-11-12T00:40:00+08:00</updated>
+<updated>2016-11-12T00:46:53+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -90,7 +90,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;接著就是要用到本篇文章開頭說提到的繼承了，英雄是遊戲裡的角色，但是目前角色只有名字這個屬性屬性，因此我們要把英雄的技能繫結到角色身上。
+&lt;p&gt;接著就是要用到本篇文章開頭說提到的繼承了，英雄是遊戲裡的角色，但是目前角色只有名字這個屬性，因此我們要讓角色繼承英雄的四個技能，這樣接下來我們建立英雄角色的時候，就可以直接使用英雄技能了。
 這裡使用  Object.create() 方法。&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
@@ -142,7 +142,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;接下來我們就能夠開心的創造出實體的英雄角色了，我們先創造出兩個英雄，易大師以及卡特蓮娜吧!&lt;/p&gt;
+&lt;p&gt;接下來我們就能夠開心的創造出實體的英雄角色了，就先創造出兩個英雄角色，易大師以及卡特蓮娜吧!&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -199,7 +199,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;這樣就差不多完成了，為了驗證創造出來的英雄，是兩個不同的角色，但可以使用共通的技能。因此 HTML 的部分，我們就用下拉式選單讓玩家可以選擇英雄，再搭配四個技能(Q、W、E、R)的按鈕，在畫面上顯示出哪個角色使用了哪個技能。&lt;/p&gt;
+&lt;p&gt;這樣就差不多完成了，為了驗證創造出來的是兩個不同的英雄角色，但可以使用共通的技能。因此 HTML 的部分，我們就用下拉式選單讓玩家可以選擇英雄，再搭配四個技能(Q、W、E、R)的按鈕，在畫面上顯示出哪個角色使用了哪個技能。&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
