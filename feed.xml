@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2016-11-12T00:27:41+08:00</updated>
+<updated>2016-11-12T00:40:00+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -17,7 +17,7 @@
 
 
 <entry>
-  <title type="html"><![CDATA[JavaScript Object Prototype - 延伸(繼承)]]></title>
+  <title type="html"><![CDATA[JavaScript Object Prototype - (繼承)]]></title>
   <link rel="alternate" type="text/html" href="https://feegg333.github.io/2016/11/09/JavaScript-object-prototypes-02/"/>
   <id>https://feegg333.github.io/2016/11/09/JavaScript-object-prototypes-02</id>
   <published>2016-11-09T22:30:00+08:00</published>
@@ -45,9 +45,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;再來就是英雄了，有玩過 LOL 的朋友應該都知道，大部分的英雄的技能就是 Q、W、E、R 這四個技能去搭配，&lt;/p&gt;
-
-&lt;p&gt;所以我們知道所有的英雄都會有 Q、W、E、R 這四個通用技能，把這四個技能定義出來。&lt;/p&gt;
+&lt;p&gt;再來就是英雄了，有玩過 LOL 的朋友應該都知道，大部分的英雄的技能就是 Q、W、E、R 這四個技能去搭配，所以我們知道所有的英雄都會有 Q、W、E、R 這四個通用技能，把這四個技能定義出來。&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -92,7 +90,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;接著就是要用到本篇文章開頭說提到的繼承了，英雄目前有四個通用技能，但是他並沒有名字的屬性，但是英雄也算是角色之一，因此我們要讓英雄的技能繫結到角色身上。
+&lt;p&gt;接著就是要用到本篇文章開頭說提到的繼承了，英雄是遊戲裡的角色，但是目前角色只有名字這個屬性屬性，因此我們要把英雄的技能繫結到角色身上。
 這裡使用  Object.create() 方法。&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
@@ -313,7 +311,7 @@
 &lt;p&gt;&lt;a href=&quot;https://jsfiddle.net/zwjw2yzt/&quot; target=&quot;_blank&quot; title=&quot;點此看程式碼範例&quot;&gt;點此可以看完整程式碼範例&lt;/a&gt;&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2016/11/09/JavaScript-object-prototypes-02/&quot;&gt;JavaScript Object Prototype - 延伸(繼承)&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on November 09, 2016.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2016/11/09/JavaScript-object-prototypes-02/&quot;&gt;JavaScript Object Prototype - (繼承)&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on November 09, 2016.&lt;/p&gt;</content>
 </entry>
 
 
