@@ -18,6 +18,11 @@ callback([
   {
     "text": "JavaScript Object Prototypes - 原型物件",
     "href": "https://feegg333.github.io/2016/11/06/JavaScript-object-prototypes-01/"
+  } ,
+
+  {
+    "text": "JavaScript Object Prototype - 延伸(繼承)",
+    "href": "https://feegg333.github.io/2016/11/09/JavaScript-object-prototypes-02/"
   } 
 
 ])
