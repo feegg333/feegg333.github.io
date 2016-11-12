@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2016-11-12T00:46:53+08:00</updated>
+<updated>2016-11-12T23:24:16+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -32,7 +32,7 @@
   
     &lt;p&gt;如果能好好的運用 JavaScript 物件繼承其他物件的特性，可以有效的減少物件初始化的時間，也可以提高 Reuse 的程度，想個有趣的例子來試試，我想英雄聯盟可說是近幾年來最夯的遊戲，所以這篇我們就來創造英雄玩玩吧!&lt;/p&gt;
 
-&lt;p&gt;先來想看看我們需要些什麼，每個遊戲內一定都要有許多角色吧，所以我們就先來定義一個簡單的角色原型吧，而角色原型就只有 name 這個屬性。&lt;/p&gt;
+&lt;p&gt;先來想看看我們需要些什麼，每個遊戲內一定都會有許多角色，所以我們就先來定義一個簡單的角色原型，而角色原型就只有 name 這個屬性。&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -90,7 +90,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;接著就是要用到本篇文章開頭說提到的繼承了，英雄是遊戲裡的角色，但是目前角色只有名字這個屬性，因此我們要讓角色繼承英雄的四個技能，這樣接下來我們建立英雄角色的時候，就可以直接使用英雄技能了。
+&lt;p&gt;英雄是遊戲裡的角色，但是目前角色只有名字這個屬性，因此我們要讓角色繼承英雄的四個技能，這樣接下來我們建立英雄角色的時候，就可以直接使用英雄技能了。
 這裡使用  Object.create() 方法。&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1

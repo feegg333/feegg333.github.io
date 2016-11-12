@@ -107,7 +107,7 @@
         <article class="notepad-post-content post tag-simple">
             <div><p>如果能好好的運用 JavaScript 物件繼承其他物件的特性，可以有效的減少物件初始化的時間，也可以提高 Reuse 的程度，想個有趣的例子來試試，我想英雄聯盟可說是近幾年來最夯的遊戲，所以這篇我們就來創造英雄玩玩吧!</p>
 
-<p>先來想看看我們需要些什麼，每個遊戲內一定都要有許多角色吧，所以我們就先來定義一個簡單的角色原型吧，而角色原型就只有 name 這個屬性。</p>
+<p>先來想看看我們需要些什麼，每個遊戲內一定都會有許多角色，所以我們就先來定義一個簡單的角色原型，而角色原型就只有 name 這個屬性。</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -165,7 +165,7 @@
 <span class="nt">&lt;/script&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>接著就是要用到本篇文章開頭說提到的繼承了，英雄是遊戲裡的角色，但是目前角色只有名字這個屬性，因此我們要讓角色繼承英雄的四個技能，這樣接下來我們建立英雄角色的時候，就可以直接使用英雄技能了。
+<p>英雄是遊戲裡的角色，但是目前角色只有名字這個屬性，因此我們要讓角色繼承英雄的四個技能，這樣接下來我們建立英雄角色的時候，就可以直接使用英雄技能了。
 這裡使用  Object.create() 方法。</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
