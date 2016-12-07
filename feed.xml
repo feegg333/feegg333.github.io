@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2016-12-08T01:35:14+08:00</updated>
+<updated>2016-12-08T02:21:24+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -27,7 +27,7 @@
     <uri>https://feegg333.github.io</uri>
     <email>riskyliu1220@gmail.com</email>
   </author>
-  <category scheme="https://feegg333.github.io/tags/#javascript" term="javascript" />
+  <category scheme="https://feegg333.github.io/tags/#CSS" term="CSS" />
   <content type="html">
   
     &lt;p&gt;在不用寫程式的情況下，透過 CSS 的屬性來做出一些互動效果，連自己看了都覺得很猛阿!! 如果研究的夠徹底，還可以做出許多超炫的效果，整個網頁就是你的專屬畫布。&lt;/p&gt;
@@ -36,7 +36,7 @@
 
 &lt;p&gt;做完的效果就如下所示&lt;/p&gt;
 
-&lt;div&gt;
+&lt;div style=&quot;max-width:1300px;&quot;&gt;
 &lt;iframe height=&quot;434&quot; scrolling=&quot;no&quot; title=&quot;eBrbqN&quot; src=&quot;//codepen.io/feegg333/embed/eBrbqN/?height=434&amp;amp;theme-id=0&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/feegg333/pen/eBrbqN/&quot;&gt;eBrbqN&lt;/a&gt; by Wei (&lt;a href=&quot;http://codepen.io/feegg333&quot;&gt;@feegg333&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
 &lt;/iframe&gt;
 &lt;/div&gt;
