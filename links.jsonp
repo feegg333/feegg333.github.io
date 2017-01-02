@@ -28,6 +28,11 @@ callback([
   {
     "text": "使用 CSS3 就能做出簡單的互動效果",
     "href": "https://feegg333.github.io/2016/12/01/CSS-hover-effect/"
+  } ,
+
+  {
+    "text": "AngularJS - Hello World! - 筆記(1)",
+    "href": "https://feegg333.github.io/2017/01/01/AngularJS-Hello-World/"
   } 
 
 ])
