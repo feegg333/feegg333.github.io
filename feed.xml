@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2017-01-06T00:52:40+08:00</updated>
+<updated>2017-01-06T01:00:48+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -18,10 +18,10 @@
 
 <entry>
   <title type="html"><![CDATA[AngularJS - Controller - 筆記(2)]]></title>
-  <link rel="alternate" type="text/html" href="https://feegg333.github.io/2017/01/01/AngularJS-Controller/"/>
-  <id>https://feegg333.github.io/2017/01/01/AngularJS-Controller</id>
-  <published>2017-01-01T22:30:00+08:00</published>
-  <updated>2017-01-01T22:30:00+08:00</updated>
+  <link rel="alternate" type="text/html" href="https://feegg333.github.io/2017/01/02/AngularJS-Controller/"/>
+  <id>https://feegg333.github.io/2017/01/02/AngularJS-Controller</id>
+  <published>2017-01-02T22:30:00+08:00</published>
+  <updated>2017-01-02T22:30:00+08:00</updated>
   <author>
     <name>Wei Liu (劉書瑋)</name>
     <uri>https://feegg333.github.io</uri>
@@ -30,7 +30,7 @@
   <category scheme="https://feegg333.github.io/tags/#AngularJS" term="AngularJS" />
   <content type="html">
   
-    &lt;p&gt;第一篇筆記有說到，AngularJS 是遵循 MVC 的框架，而當中 &lt;strong&gt;&lt;code&gt;『Controller』&lt;/code&gt;&lt;/strong&gt; 的部分主要是來處理 view 與 model 之間的事件，這篇就來簡單的介紹 ng-controller。&lt;/p&gt;
+    &lt;p&gt;第一篇筆記有說到，AngularJS 是遵循 MVC 的框架，而當中 Controller 的部分主要是來處理 view 與 model 之間的事件，這篇就來簡單的介紹 Controller。&lt;/p&gt;
 
 &lt;p&gt;在 Controller 中，我們可以對 Model 進行一些資料處理，而當資料經過處理後的變動，也能夠反應到 View 上，達到 AngularJS 的雙向資料繫結 (Two Way Data-Binding)。&lt;/p&gt;
 
@@ -41,12 +41,13 @@
 &lt;p&gt;做完的效果就如下所示：&lt;/p&gt;
 
 &lt;div style=&quot;max-width:900px; margin:0 auto;&quot;&gt;
-&lt;iframe height=&quot;450&quot; scrolling=&quot;no&quot; title=&quot;AngularJS - Controller&quot; src=&quot;//codepen.io/feegg333/embed/YNzjXZ/?height=450&amp;amp;theme-id=0&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/feegg333/pen/YNzjXZ/&quot;&gt;AngularJS - Controller&lt;/a&gt; by Wei (&lt;a href=&quot;http://codepen.io/feegg333&quot;&gt;@feegg333&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
+&lt;iframe height=&quot;430&quot; scrolling=&quot;no&quot; title=&quot;AngularJS - Controller&quot; src=&quot;//codepen.io/feegg333/embed/YNzjXZ/?height=430&amp;amp;theme-id=0&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/feegg333/pen/YNzjXZ/&quot;&gt;AngularJS - Controller&lt;/a&gt; by Wei (&lt;a href=&quot;http://codepen.io/feegg333&quot;&gt;@feegg333&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
 &lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;p&gt;接下來就來看看該怎麼做吧!!
-首先準備好基本的 html，程式碼如下：&lt;/p&gt;
+&lt;p&gt;接下來就一步一步來做看看吧!!&lt;/p&gt;
+
+&lt;p&gt;首先準備好基本的 html，程式碼如下：&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
@@ -254,7 +255,7 @@
 &lt;p&gt;&lt;a href=&quot;http://codepen.io/feegg333/pen/YNzjXZ&quot; target=&quot;_blank&quot; title=&quot;點此看程式碼範例&quot;&gt;點此可以看完整程式碼範例&lt;/a&gt;&lt;/p&gt;
 
   
-  &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2017/01/01/AngularJS-Controller/&quot;&gt;AngularJS - Controller - 筆記(2)&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on January 01, 2017.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2017/01/02/AngularJS-Controller/&quot;&gt;AngularJS - Controller - 筆記(2)&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on January 02, 2017.&lt;/p&gt;</content>
 </entry>
 
 
