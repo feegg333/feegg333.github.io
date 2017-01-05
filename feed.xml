@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2017-01-04T00:37:26+08:00</updated>
+<updated>2017-01-06T00:04:41+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -165,13 +165,9 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;接著就能利用 AngularJS 強大的 ng-model 來進行資料綁定的部分了，我們先幫 input 標籤加上 ng-model 的屬性，並且給這個屬性值，&lt;/p&gt;
+&lt;p&gt;接著就能利用 AngularJS 強大的 ng-model 來進行資料綁定的部分了，我們先幫 input 標籤加上 ng-model 的屬性，並且給這個屬性值，輸入 message 的 input 的 ng-model 屬性值就給他叫做 message, 而輸入 name 的 input 的 ng-model 屬性值就給叫做 name，這樣比較簡單易懂，而這邊的 ng-model 的屬性的值，就把它當成是你自己命名的變數名稱，而這個名稱就可以拿來對應再要綁定資料的地方。&lt;/p&gt;
 
-&lt;p&gt;輸入 message 的 input 的 ng-model 屬性值就給他叫做 message, 而輸入 name 的 input 的 ng-model 屬性值就給叫做 name，這樣比較簡單易懂，&lt;/p&gt;
-
-&lt;p&gt;而這邊的 ng-model 的屬性的值，就把它當成是你自己命名的變數名稱，而這個名稱就可以拿來對應再要綁定資料的地方，&lt;/p&gt;
-
-&lt;p&gt;我們希望輸入的資料會綁定在 &amp;lt;h1&amp;gt; 上面， 因此我們就要運用到 AngularJS 的表達式。 &amp;lt;h1&amp;gt; 標籤的內容，我們就可以加上  兩個大括弧，中間放要綁定的 ng-model 屬性的值，就像這樣 。&lt;/p&gt;
+&lt;p&gt;我們希望輸入的資料會綁定在 &amp;lt;h1&amp;gt; 上面， 因此我們就要運用到 AngularJS 的表達式。 &amp;lt;h1&amp;gt; 標籤的內容，我們就可以加上 {{}}兩個大括弧，中間放要綁定的 ng-model 屬性的值，就像這樣  {{message}}。&lt;/p&gt;
 
 &lt;p&gt;修改完後的程式碼如下：&lt;/p&gt;
 
@@ -222,9 +218,20 @@
 
 &lt;p&gt;當都沒有輸入資料的時候， h1 空空的好像怪怪的，還沒有輸入任何資料的時候，能不能加上預設值呢?&lt;/p&gt;
 
-&lt;p&gt;只要在  中再加上  ，這樣預設 h1 一開始就會顯示出 Hello 的字串，也幫 name 的部份加上預設值 ，&lt;/p&gt;
-
-&lt;p&gt;這樣就完成了，完整程式碼如下&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;只要在 {{message}}中再加上 {{ message&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;“Hello” }}，這樣預設 h1 一開始就會顯示出 Hello 的字串，&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;也幫 name 的部份加上預設值 {{ name&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;“World!” }}，這樣就完成了，完整程式碼如下：&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2

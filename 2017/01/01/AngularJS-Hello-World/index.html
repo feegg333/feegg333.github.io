@@ -240,13 +240,9 @@
 <span class="nt">&lt;/html&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>接著就能利用 AngularJS 強大的 ng-model 來進行資料綁定的部分了，我們先幫 input 標籤加上 ng-model 的屬性，並且給這個屬性值，</p>
+<p>接著就能利用 AngularJS 強大的 ng-model 來進行資料綁定的部分了，我們先幫 input 標籤加上 ng-model 的屬性，並且給這個屬性值，輸入 message 的 input 的 ng-model 屬性值就給他叫做 message, 而輸入 name 的 input 的 ng-model 屬性值就給叫做 name，這樣比較簡單易懂，而這邊的 ng-model 的屬性的值，就把它當成是你自己命名的變數名稱，而這個名稱就可以拿來對應再要綁定資料的地方。</p>
 
-<p>輸入 message 的 input 的 ng-model 屬性值就給他叫做 message, 而輸入 name 的 input 的 ng-model 屬性值就給叫做 name，這樣比較簡單易懂，</p>
-
-<p>而這邊的 ng-model 的屬性的值，就把它當成是你自己命名的變數名稱，而這個名稱就可以拿來對應再要綁定資料的地方，</p>
-
-<p>我們希望輸入的資料會綁定在 &lt;h1&gt; 上面， 因此我們就要運用到 AngularJS 的表達式。 &lt;h1&gt; 標籤的內容，我們就可以加上  兩個大括弧，中間放要綁定的 ng-model 屬性的值，就像這樣 。</p>
+<p>我們希望輸入的資料會綁定在 &lt;h1&gt; 上面， 因此我們就要運用到 AngularJS 的表達式。 &lt;h1&gt; 標籤的內容，我們就可以加上 {{}}兩個大括弧，中間放要綁定的 ng-model 屬性的值，就像這樣  {{message}}。</p>
 
 <p>修改完後的程式碼如下：</p>
 
@@ -297,9 +293,20 @@
 
 <p>當都沒有輸入資料的時候， h1 空空的好像怪怪的，還沒有輸入任何資料的時候，能不能加上預設值呢?</p>
 
-<p>只要在  中再加上  ，這樣預設 h1 一開始就會顯示出 Hello 的字串，也幫 name 的部份加上預設值 ，</p>
-
-<p>這樣就完成了，完整程式碼如下</p>
+<table>
+  <tbody>
+    <tr>
+      <td>只要在 {{message}}中再加上 {{ message</td>
+      <td> </td>
+      <td>“Hello” }}，這樣預設 h1 一開始就會顯示出 Hello 的字串，</td>
+    </tr>
+    <tr>
+      <td>也幫 name 的部份加上預設值 {{ name</td>
+      <td> </td>
+      <td>“World!” }}，這樣就完成了，完整程式碼如下：</td>
+    </tr>
+  </tbody>
+</table>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
