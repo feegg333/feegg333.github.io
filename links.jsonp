@@ -33,6 +33,11 @@ callback([
   {
     "text": "AngularJS - Hello World! - 筆記(1)",
     "href": "https://feegg333.github.io/2017/01/01/AngularJS-Hello-World/"
+  } ,
+
+  {
+    "text": "AngularJS - Controller - 筆記(2)",
+    "href": "https://feegg333.github.io/2017/01/01/AngularJS-Controller/"
   } 
 
 ])
