@@ -105,7 +105,7 @@
             </header>
 
         <article class="notepad-post-content post tag-simple">
-            <div><p>開始看 AngularJS 以後，很容易就可以做到 <strong><code>『資料綁定』</code></strong> 這一點真的是太猛啦!! 以往覺得要做到這樣的效果，一定要寫很多複雜的程式，現在只需要透過 AngularJS ，就能夠輕鬆搞定!</p>
+            <div><p>最近開始研究 AngularJS 以後，覺得它能輕鬆做到 <strong><code>『資料綁定』</code></strong> 的這一點真是太猛啦!!</p>
 
 <p>參考 AngularJS 在維基百科有簡單的介紹資料綁定的部分： Angular在呈現和資料中間，可以簡單建立雙向的資料綁定。一旦建立雙向綁定，使用者輸入，會由Angular自動傳到一個變數中，再自動讀到所有綁到它的內容，更新它。效果上就是立即的資料同步。在程式碼中修改變數，也會直接反應到呈現的外觀上。不僅內容可以雙向綁定，其他諸如類別、寬度、高度等等，都可以和變數與使用者的輸入，綁定起來。</p>
 
@@ -293,20 +293,8 @@
 
 <p>當都沒有輸入資料的時候， h1 空空的好像怪怪的，還沒有輸入任何資料的時候，能不能加上預設值呢?</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>只要在 {{message}}中再加上 {{ message</td>
-      <td> </td>
-      <td>“Hello” }}，這樣預設 h1 一開始就會顯示出 Hello 的字串，</td>
-    </tr>
-    <tr>
-      <td>也幫 name 的部份加上預設值 {{ name</td>
-      <td> </td>
-      <td>“World!” }}，這樣就完成了，完整程式碼如下：</td>
-    </tr>
-  </tbody>
-</table>
+<p>只要在 {{message}}中再加上 {{ message || “Hello” }}，這樣預設 h1 一開始就會顯示出 Hello 的字串，
+也幫 name 的部份加上預設值 {{ name || “World!” }}，這樣就完成了，完整程式碼如下：</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
