@@ -7,13 +7,89 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2017-01-10T22:03:46+08:00</updated>
+<updated>2017-01-10T22:28:44+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
   <uri>https://feegg333.github.io/</uri>
   <email>riskyliu1220@gmail.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[AngularJS - ng-bind - 筆記(3)]]></title>
+  <link rel="alternate" type="text/html" href="https://feegg333.github.io/2017/01/03/AngularJS-ng-bind/"/>
+  <id>https://feegg333.github.io/2017/01/03/AngularJS-ng-bind</id>
+  <published>2017-01-03T22:30:00+08:00</published>
+  <updated>2017-01-03T22:30:00+08:00</updated>
+  <author>
+    <name>Wei Liu (劉書瑋)</name>
+    <uri>https://feegg333.github.io</uri>
+    <email>riskyliu1220@gmail.com</email>
+  </author>
+  <category scheme="https://feegg333.github.io/tags/#AngularJS" term="AngularJS" />
+  <content type="html">
+  
+    &lt;p&gt;AngularJS 除了使用雙大括號 {{}} 表達式來讓資料跟 Model 綁定之外 ，也可以使用 ng-bind 這個屬性來做到這個效果。
+主要的差異在於當我們在 html 的 tag 裡都是使用雙大括號表達式的時候， AngularJS 未載入完成或是載入失敗的時候，我們可能就會看到畫面上出現 {{expression}} 這樣的內容，雖然當 AngularJS 載入完成後， {{expression}} 會馬上變成要顯示的資料，但是我們可以直接透過 ng-bind 這個屬性來直接避免掉這樣的問題， 而且一樣可以在這個屬性裡直接做一些簡單的邏輯計算。&lt;/p&gt;
+
+&lt;p&gt;使用的方法非常簡單，這次我們來做一個可以讓使用者輸入數量與單價，然後畫面上就會直接算出總價的小範例。&lt;/p&gt;
+
+&lt;p&gt;做完的效果就如下所示：&lt;/p&gt;
+
+&lt;div style=&quot;max-width:900px; margin:0 auto;&quot;&gt;
+&lt;iframe height=&quot;400&quot; scrolling=&quot;no&quot; title=&quot;AngularJS - Controller&quot; src=&quot;//codepen.io/feegg333/embed/dNoygv/?height=400&amp;amp;theme-id=0&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/feegg333/pen/dNoygv/&quot;&gt;AngularJS - ng-bind&lt;/a&gt; by Wei (&lt;a href=&quot;http://codepen.io/feegg333&quot;&gt;@feegg333&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
+&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;來看看怎麼做，首先準備好需要的 html 的內容，然後記得在 div 先加上 ng-app 屬性，程式碼如下：&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;well&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-app&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;ng-bind Demo&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;Quantity:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- 第二步，在 input 標籤新增一個 ng-model 屬性，值給一個你想要的變數名稱 --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;number&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;quantity&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter a number here&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;Price:&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;number&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;price&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter a number here&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;總價為：&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt; {{quantity * price}}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;元&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;在 顯示計算後金額 的 span 部分，這次我們就不用原本的 AngularJS 表達式  {{quantity * price}} 來與 model 做資料繫結算出金額，而是使用 ng-bind 這個屬性，先幫這個 span 加上 ng-bind 的屬性，程式碼如下：&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;總價為：&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-bind=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;元&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;把原本在雙括號表達式裡的內容：quantity * price，寫在 ng-bind 的屬性裡，這樣就完成了，但是只做到這樣的話，在還沒輸入任何數字之前，畫面上會直接顯示出 NaN，這是因為沒有設定預設值的關係，那…使用 ng-bind 的時候能跟使用表達式時一樣加上預設值嗎？其實用法跟表達式一樣，所以記得要加上預設值，以免畫面上出現 NaN。&lt;/p&gt;
+
+&lt;p&gt;加上預設值後的程式碼如下：&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;總價為：&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-bind=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;quantity * price || &#39;(未輸入金額與數量)&#39;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;元&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;這樣範例就完成嘍，動手一起寫看看吧。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://codepen.io/feegg333/pen/dNoygv&quot; target=&quot;_blank&quot; title=&quot;點此看程式碼範例&quot;&gt;點此可以看完整程式碼範例&lt;/a&gt;&lt;/p&gt;
+
+  
+  &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2017/01/03/AngularJS-ng-bind/&quot;&gt;AngularJS - ng-bind - 筆記(3)&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on January 03, 2017.&lt;/p&gt;</content>
+</entry>
 
 
 <entry>
@@ -37,8 +113,6 @@
 &lt;p&gt;馬上來實做一個簡單的例子，在畫面上有兩個 input，分別可以輸入書名以及書的價格，而存放資料的部分 (Model) 會經過 Controller 處理過後在畫面上 (View) 會顯示出書名及判斷出價格我們買不買得起，目前是設定超過 500 元就太貴買不起啦!&lt;/p&gt;
 
 &lt;p&gt;完成後的畫面就會如下所示：&lt;/p&gt;
-
-&lt;p&gt;做完的效果就如下所示：&lt;/p&gt;
 
 &lt;div style=&quot;max-width:900px; margin:0 auto;&quot;&gt;
 &lt;iframe height=&quot;440&quot; scrolling=&quot;no&quot; title=&quot;AngularJS - Controller&quot; src=&quot;//codepen.io/feegg333/embed/YNzjXZ/?height=440&amp;amp;theme-id=0&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/feegg333/pen/YNzjXZ/&quot;&gt;AngularJS - Controller&lt;/a&gt; by Wei (&lt;a href=&quot;http://codepen.io/feegg333&quot;&gt;@feegg333&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
@@ -509,7 +583,7 @@
 		&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;placeholder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter a name here&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 
 		&lt;span class=&quot;nt&quot;&gt;&amp;lt;hr&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt; {{ message \|\| &quot;Hello&quot; }} {{ name \|\| &quot;World!&quot; }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt; {{ message || &quot;Hello&quot; }} {{ name || &quot;World!&quot; }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
 	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;

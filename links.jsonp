@@ -38,6 +38,11 @@ callback([
   {
     "text": "AngularJS - Controller - 筆記(2)",
     "href": "https://feegg333.github.io/2017/01/02/AngularJS-Controller/"
+  } ,
+
+  {
+    "text": "AngularJS - ng-bind - 筆記(3)",
+    "href": "https://feegg333.github.io/2017/01/03/AngularJS-ng-bind/"
   } 
 
 ])
