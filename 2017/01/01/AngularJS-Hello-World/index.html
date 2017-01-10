@@ -283,13 +283,13 @@
 		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">ng-model=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"Enter a name here"</span><span class="nt">&gt;</span>
 
 		<span class="nt">&lt;hr&gt;</span>
-<span class="nt">&lt;h1&gt;</span> <span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1&gt;</span>{{message}} {{name}}<span class="nt">&lt;/h1&gt;</span>
 	<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>做到這裡，在 message 的對話框輸入的內容，已經會綁定在 &lt;h1&gt; 標籤裡面的 ，而在 name 的對話框輸入的內容，已經會綁定在 &lt;h1&gt; 標籤裡面的 。</p>
+<p>做到這裡，在 message 的對話框輸入的內容，已經會綁定在 &lt;h1&gt; 標籤裡面的 {{message}}，而在 name 的對話框輸入的內容，已經會綁定在 &lt;h1&gt; 標籤裡面的 {{name}}。</p>
 
 <p>當都沒有輸入資料的時候， h1 空空的好像怪怪的，還沒有輸入任何資料的時候，能不能加上預設值呢?</p>
 
@@ -347,7 +347,7 @@
 		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">ng-model=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"Enter a name here"</span><span class="nt">&gt;</span>
 
 		<span class="nt">&lt;hr&gt;</span>
-<span class="nt">&lt;h1&gt;</span> <span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1&gt;</span> {{ message \|\| "Hello" }} {{ name \|\| "World!" }}<span class="nt">&lt;/h1&gt;</span>
 	<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span><span class="w">
