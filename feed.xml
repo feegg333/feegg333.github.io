@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2017-01-10T22:32:27+08:00</updated>
+<updated>2017-01-10T22:38:05+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -30,7 +30,7 @@
   <category scheme="https://feegg333.github.io/tags/#AngularJS" term="AngularJS" />
   <content type="html">
   
-    &lt;p&gt;AngularJS 除了使用雙大括號  表達式來讓資料跟 Model 綁定之外 ，也可以使用 ng-bind 這個屬性來做到這個效果。
+    &lt;p&gt;AngularJS 除了使用雙大括號 {{}} 表達式來讓資料跟 Model 綁定之外 ，也可以使用 ng-bind 這個屬性來做到這個效果。
 主要的差異在於當我們在 html 的 tag 裡都是使用雙大括號表達式的時候， AngularJS 未載入完成或是載入失敗的時候，我們可能就會看到畫面上出現 {{expression}} 這樣的內容，雖然當 AngularJS 載入完成後， {{expression}} 會馬上變成要顯示的資料，但是我們可以直接透過 ng-bind 這個屬性來直接避免掉這樣的問題， 而且一樣可以在這個屬性裡直接做一些簡單的邏輯計算。&lt;/p&gt;
 
 &lt;p&gt;使用的方法非常簡單，這次我們來做一個可以讓使用者輸入數量與單價，然後畫面上就會直接算出總價的小範例。&lt;/p&gt;
@@ -38,7 +38,7 @@
 &lt;p&gt;做完的效果就如下所示：&lt;/p&gt;
 
 &lt;div style=&quot;max-width:900px; margin:0 auto;&quot;&gt;
-&lt;iframe height=&quot;400&quot; scrolling=&quot;no&quot; title=&quot;AngularJS - Controller&quot; src=&quot;//codepen.io/feegg333/embed/dNoygv/?height=400&amp;amp;theme-id=0&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/feegg333/pen/dNoygv/&quot;&gt;AngularJS - ng-bind&lt;/a&gt; by Wei (&lt;a href=&quot;http://codepen.io/feegg333&quot;&gt;@feegg333&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
+&lt;iframe height=&quot;420&quot; scrolling=&quot;no&quot; title=&quot;AngularJS - Controller&quot; src=&quot;//codepen.io/feegg333/embed/dNoygv/?height=420&amp;amp;theme-id=0&amp;amp;default-tab=result&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/feegg333/pen/dNoygv/&quot;&gt;AngularJS - ng-bind&lt;/a&gt; by Wei (&lt;a href=&quot;http://codepen.io/feegg333&quot;&gt;@feegg333&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
 &lt;/iframe&gt;
 &lt;/div&gt;
 
