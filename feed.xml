@@ -7,7 +7,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://feegg333.github.io/feed.xml" />
 <link rel="alternate" type="text/html" href="https://feegg333.github.io/" />
-<updated>2017-04-11T01:57:42+08:00</updated>
+<updated>2017-04-11T02:03:01+08:00</updated>
 <id>https://feegg333.github.io/</id>
 <author>
   <name>Wei Liu (劉書瑋)</name>
@@ -30,7 +30,7 @@
   <category scheme="https://feegg333.github.io/tags/#CSS" term="CSS" />
   <content type="html">
   
-    &lt;p&gt;在設計網頁時，為了使畫面美觀，會先設計好每一個區塊的寬度，但是區塊內要放的文字長度常常並不是我們能預期的，要是碰到過長的文字，沒好好去處理，輕則從畫面上看起來句子被切掉了，重則讓畫面整個跑版或爆版，那事情可就大條了! &lt;/p&gt;
+    &lt;p&gt;在設計網頁時，為了使畫面美觀，會先設計好每一個區塊的寬度，但是區塊內要放的文字長度常常並不是我們能預期的，要是碰到過長的文字，沒好好去處理，輕則從畫面上看起來句子被切掉了，重則讓畫面整個跑版或爆版，那事情可就大條了!&lt;/p&gt;
 
 &lt;p&gt;為了防止這種情況發生，我們可以透過 CSS 的一些屬性來處理，當文字的長度超過所設定的寬度時，則會在最後面顯示 … 把多的字省略掉，這樣以後字再多也不怕了。&lt;/p&gt;
 
@@ -56,74 +56,65 @@
 
 &lt;p&gt;首先我們先準備好一個 div，來裝圖片跟文字，文字則額外再用另一個 div 包起來，HTML 的部份如下：&lt;/p&gt;
 
-&lt;p&gt;```HTML&lt;/p&gt;
-&lt;div&gt;
-  &lt;img src=&quot;http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;amp;w=1650&amp;amp;sharp=30&quot; /&gt;
-  &lt;div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;amp;w=1650&amp;amp;sharp=30&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
     具備劃時代Touch Bar 的MacBook Pro，有13 吋及15 吋機型可供選擇。立即深入了解全新功能並進行線上購買。
-  &lt;div&gt;
-&lt;div&gt;
-```
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-接著就來設定樣式吧，首先設定最外層的容器，指定寬高，這邊我們設定區塊為寬 300px，高 250px，padding:3px，圖片則讓他撐到滿版寬度。
+&lt;p&gt;接著就來設定樣式吧，首先設定最外層的容器，指定寬高，這邊我們設定區塊為寬 300px，高 250px，padding:3px，圖片則讓他撐到滿版寬度。&lt;/p&gt;
 
-```CSS
-.main{
-  width:300px;
-  height:250px;
-  padding:3px;
-  border:1px solid #c8c8c8;
-}
-.pic{
-  width:100%;
-  height:auto;
-}
-```
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;250px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#c8c8c8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.pic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-再來則是重點，要處理放文字的區塊，我們先設定文字區塊的寬度為 280px，這時候文字只要超過 280px 的長度，就會自動換行(區塊元素預設樣式行為)，所以設定寬度是很重要的喔! 接著設定 white-space: nowrap 屬性，讓文字長度超過設定的寬度時不會自動換行，設定 overflow: hidden 屬性使文字長度超過設定寬度時，會將溢出的字隱藏，再來是很重要的點點點，設定 text-overflow: ellipsis 屬性則會幫你帶出 ... 省略符號來當結尾，完整的 CSS 樣式如下：
+&lt;p&gt;再來則是重點，要處理放文字的區塊，我們先設定文字區塊的寬度為 280px，這時候文字只要超過 280px 的長度，就會自動換行(區塊元素預設樣式行為)，所以設定寬度是很重要的喔! 接著設定 white-space: nowrap 屬性，讓文字長度超過設定的寬度時不會自動換行，設定 overflow: hidden 屬性使文字長度超過設定寬度時，會將溢出的字隱藏，再來是很重要的點點點，設定 text-overflow: ellipsis 屬性則會幫你帶出 … 省略符號來當結尾，完整的 CSS 樣式如下：&lt;/p&gt;
 
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;300px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;250px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#c8c8c8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.pic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;.des&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;280px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;16px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&#39;Microsoft JhengHei&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&#39;Segoe UI&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Tahoma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Geneva&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Verdana&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sans-serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;white-space&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;nowrap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* 不自動換行 */&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* 隱藏溢出字元 */&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;text-overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ellipsis&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* 使用省略符號 ... */&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-```CSS
-.main{
-  width:300px;
-  height:250px;
-  padding:3px;
-  border:1px solid #c8c8c8;
-}
-.pic{
-  width:100%;
-  height:auto;
-}
-.des{
-  width:280px;
-  font-size:16px;
-  margin:0 auto;
-  margin-top:10px;
-  font-family: &#39;Microsoft JhengHei&#39;,&#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;
-  white-space: nowrap; /* 不自動換行 */
-  overflow: hidden; /* 隱藏溢出字元 */
-  text-overflow: ellipsis; /* 使用省略符號 ... */
-}
-```
+&lt;blockquote&gt;
+  &lt;p&gt;小提醒： 要是使用非區塊元素，而是行內元素 (例如：span) 時，則要再加上 display : inline-block 屬性。&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&amp;gt; 小提醒： 要是使用非區塊元素，而是行內元素 (例如：span) 時，則要再加上 display : inline-block 屬性。
+&lt;p&gt;現在就只要把設定好的 CSS 套用在之前準備好的 HTML 裡，就可以來看看結果啦! 套用樣式後的 HTML 如下：&lt;/p&gt;
 
-現在就只要把設定好的 CSS 套用在之前準備好的 HTML 裡，就可以來看看結果啦! 套用樣式後的 HTML 如下：
-
-```HTML
-&lt;div class=&quot;main&quot;&gt;
-  &lt;img class=&quot;pic&quot; src=&quot;http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;amp;w=1650&amp;amp;sharp=30&quot; /&gt;
-  &lt;div class=&quot;des&quot;&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pic&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;amp;w=1650&amp;amp;sharp=30&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;des&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
     劃時代 Touch Bar 的 MacBook Pro，有13 吋及15 吋機型可供選擇。立即深入了解全新功能並進行線上購買。
-  &lt;div&gt;
-&lt;div&gt;
-```
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-這樣就完成嘍，快點一起動手玩看看吧!!
+&lt;p&gt;這樣就完成嘍，快點一起動手玩看看吧!!&lt;/p&gt;
 
-&lt;a href=&quot;http://codepen.io/feegg333/pen/JWgyZZ&quot; target=&quot;_blank&quot; title=&quot;點此看程式碼範例&quot;&gt;點此可以看完整程式碼範例&lt;/a&gt;
-
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;http://codepen.io/feegg333/pen/JWgyZZ&quot; target=&quot;_blank&quot; title=&quot;點此看程式碼範例&quot;&gt;點此可以看完整程式碼範例&lt;/a&gt;&lt;/p&gt;
 
   
   &lt;p&gt;&lt;a href=&quot;https://feegg333.github.io/2017/03/01/text-overflow-ellipsis-nowrap/&quot;&gt;使用 CSS 做出將溢出字元省略的效果 - 單行文字&lt;/a&gt; was originally published by Wei Liu (劉書瑋) at &lt;a href=&quot;https://feegg333.github.io&quot;&gt;Wei Liu&lt;/a&gt; on March 01, 2017.&lt;/p&gt;</content>
@@ -853,7 +844,7 @@
 &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;70%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;63px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Helvetica&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;Helvetica;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;18px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;18px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;接下來就是最後的步驟了，使用 hover 來設定滑鼠移到容器上面時改變屬性而做出動畫的效果，這邊設定為當滑鼠移到最上層的套用 adBorder 這個 class 的 div 時， img 會變模糊，如何使圖片變模糊呢? 只需要設定 filter: blur(3px) 即可。

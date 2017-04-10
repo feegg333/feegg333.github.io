@@ -105,7 +105,7 @@
             </header>
 
         <article class="notepad-post-content post tag-simple">
-            <div><p>在設計網頁時，為了使畫面美觀，會先設計好每一個區塊的寬度，但是區塊內要放的文字長度常常並不是我們能預期的，要是碰到過長的文字，沒好好去處理，輕則從畫面上看起來句子被切掉了，重則讓畫面整個跑版或爆版，那事情可就大條了! </p>
+            <div><p>在設計網頁時，為了使畫面美觀，會先設計好每一個區塊的寬度，但是區塊內要放的文字長度常常並不是我們能預期的，要是碰到過長的文字，沒好好去處理，輕則從畫面上看起來句子被切掉了，重則讓畫面整個跑版或爆版，那事情可就大條了!</p>
 
 <p>為了防止這種情況發生，我們可以透過 CSS 的一些屬性來處理，當文字的長度超過所設定的寬度時，則會在最後面顯示 … 把多的字省略掉，這樣以後字再多也不怕了。</p>
 
@@ -131,74 +131,65 @@
 
 <p>首先我們先準備好一個 div，來裝圖片跟文字，文字則額外再用另一個 div 包起來，HTML 的部份如下：</p>
 
-<p>```HTML</p>
-<div>
-  <img src="http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;w=1650&amp;sharp=30" />
-  <div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;w=1650&amp;sharp=30"</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
     具備劃時代Touch Bar 的MacBook Pro，有13 吋及15 吋機型可供選擇。立即深入了解全新功能並進行線上購買。
-  <div>
-<div>
-```
+  <span class="nt">&lt;div&gt;</span>
+<span class="nt">&lt;div&gt;</span></code></pre></figure>
 
-接著就來設定樣式吧，首先設定最外層的容器，指定寬高，這邊我們設定區塊為寬 300px，高 250px，padding:3px，圖片則讓他撐到滿版寬度。
+<p>接著就來設定樣式吧，首先設定最外層的容器，指定寬高，這邊我們設定區塊為寬 300px，高 250px，padding:3px，圖片則讓他撐到滿版寬度。</p>
 
-```CSS
-.main{
-  width:300px;
-  height:250px;
-  padding:3px;
-  border:1px solid #c8c8c8;
-}
-.pic{
-  width:100%;
-  height:auto;
-}
-```
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.main</span><span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="m">250px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span><span class="m">3px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="m">#c8c8c8</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.pic</span><span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
 
-再來則是重點，要處理放文字的區塊，我們先設定文字區塊的寬度為 280px，這時候文字只要超過 280px 的長度，就會自動換行(區塊元素預設樣式行為)，所以設定寬度是很重要的喔! 接著設定 white-space: nowrap 屬性，讓文字長度超過設定的寬度時不會自動換行，設定 overflow: hidden 屬性使文字長度超過設定寬度時，會將溢出的字隱藏，再來是很重要的點點點，設定 text-overflow: ellipsis 屬性則會幫你帶出 ... 省略符號來當結尾，完整的 CSS 樣式如下：
+<p>再來則是重點，要處理放文字的區塊，我們先設定文字區塊的寬度為 280px，這時候文字只要超過 280px 的長度，就會自動換行(區塊元素預設樣式行為)，所以設定寬度是很重要的喔! 接著設定 white-space: nowrap 屬性，讓文字長度超過設定的寬度時不會自動換行，設定 overflow: hidden 屬性使文字長度超過設定寬度時，會將溢出的字隱藏，再來是很重要的點點點，設定 text-overflow: ellipsis 屬性則會幫你帶出 … 省略符號來當結尾，完整的 CSS 樣式如下：</p>
 
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.main</span><span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="m">250px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span><span class="m">3px</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="m">#c8c8c8</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.pic</span><span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span><span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.des</span><span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span><span class="m">280px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span><span class="m">16px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span><span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">margin-top</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Microsoft JhengHei'</span><span class="p">,</span><span class="s2">'Segoe UI'</span><span class="p">,</span> <span class="n">Tahoma</span><span class="p">,</span> <span class="n">Geneva</span><span class="p">,</span> <span class="n">Verdana</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">white-space</span><span class="p">:</span> <span class="nb">nowrap</span><span class="p">;</span> <span class="c">/* 不自動換行 */</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span> <span class="c">/* 隱藏溢出字元 */</span>
+  <span class="nl">text-overflow</span><span class="p">:</span> <span class="n">ellipsis</span><span class="p">;</span> <span class="c">/* 使用省略符號 ... */</span>
+<span class="p">}</span></code></pre></figure>
 
-```CSS
-.main{
-  width:300px;
-  height:250px;
-  padding:3px;
-  border:1px solid #c8c8c8;
-}
-.pic{
-  width:100%;
-  height:auto;
-}
-.des{
-  width:280px;
-  font-size:16px;
-  margin:0 auto;
-  margin-top:10px;
-  font-family: 'Microsoft JhengHei','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  white-space: nowrap; /* 不自動換行 */
-  overflow: hidden; /* 隱藏溢出字元 */
-  text-overflow: ellipsis; /* 使用省略符號 ... */
-}
-```
+<blockquote>
+  <p>小提醒： 要是使用非區塊元素，而是行內元素 (例如：span) 時，則要再加上 display : inline-block 屬性。</p>
+</blockquote>
 
-&gt; 小提醒： 要是使用非區塊元素，而是行內元素 (例如：span) 時，則要再加上 display : inline-block 屬性。
+<p>現在就只要把設定好的 CSS 套用在之前準備好的 HTML 裡，就可以來看看結果啦! 套用樣式後的 HTML 如下：</p>
 
-現在就只要把設定好的 CSS 套用在之前準備好的 HTML 裡，就可以來看看結果啦! 套用樣式後的 HTML 如下：
-
-```HTML
-<div class="main">
-  <img class="pic" src="http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;w=1650&amp;sharp=30" />
-  <div class="des">
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"main"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"pic"</span> <span class="na">src=</span><span class="s">"http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;w=1650&amp;sharp=30"</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"des"</span><span class="nt">&gt;</span>
     劃時代 Touch Bar 的 MacBook Pro，有13 吋及15 吋機型可供選擇。立即深入了解全新功能並進行線上購買。
-  <div>
-<div>
-```
+  <span class="nt">&lt;div&gt;</span>
+<span class="nt">&lt;div&gt;</span></code></pre></figure>
 
-這樣就完成嘍，快點一起動手玩看看吧!!
+<p>這樣就完成嘍，快點一起動手玩看看吧!!</p>
 
-<a href="http://codepen.io/feegg333/pen/JWgyZZ" target="_blank" title="點此看程式碼範例">點此可以看完整程式碼範例</a>
-
-</div></div></div></div></div></div></div></div>
+<p><a href="http://codepen.io/feegg333/pen/JWgyZZ" target="_blank" title="點此看程式碼範例">點此可以看完整程式碼範例</a></p>
 
             </div>
         </article>
