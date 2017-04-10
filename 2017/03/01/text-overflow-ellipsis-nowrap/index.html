@@ -2,18 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>ANGULARJS - NG-BIND - 筆記(3) &vert; WEI LIU</title>
-<meta name="description" content="AngularJS 除了使用雙大括號 {{}} 表達式來讓資料跟 Model 綁定之外 ，也可以使用 ng-bind 來做到資料繫結。">
-<meta name="keywords" content="AngularJS">
+<title>使用 CSS 做出將溢出字元省略的效果 - 單行文字 &vert; WEI LIU</title>
+<meta name="description" content="在設計網頁時，通常會先設計好每一個區塊的寬度，但區塊內要放的文字長度常常並不是我們能預期的，要是碰到過長的文字改如何處理呢？">
+<meta name="keywords" content="CSS">
 
 
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AngularJS - ng-bind - 筆記(3)">
-<meta property="og:description" content="AngularJS 除了使用雙大括號 {{}} 表達式來讓資料跟 Model 綁定之外 ，也可以使用 ng-bind 來做到資料繫結。">
-<meta property="og:url" content="https://feegg333.github.io/2017/01/03/AngularJS-ng-bind/">
+<meta property="og:title" content="使用 CSS 做出將溢出字元省略的效果 - 單行文字">
+<meta property="og:description" content="在設計網頁時，通常會先設計好每一個區塊的寬度，但區塊內要放的文字長度常常並不是我們能預期的，要是碰到過長的文字改如何處理呢？">
+<meta property="og:url" content="https://feegg333.github.io/2017/03/01/text-overflow-ellipsis-nowrap/">
 <meta property="og:site_name" content="Wei Liu">
 <meta property="og:image" content="https://feegg333.github.io/images/cover3.jpg">
 
@@ -21,7 +21,7 @@
 
 
 
-<link rel="canonical" href="https://feegg333.github.io/2017/01/03/AngularJS-ng-bind/">
+<link rel="canonical" href="https://feegg333.github.io/2017/03/01/text-overflow-ellipsis-nowrap/">
 <link href="https://feegg333.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Wei Liu Feed">
 
 
@@ -96,71 +96,109 @@
                 <div class="notepad-post-title-simple row">
                     <div class="small-12 columns">
                         <div class="notepad-post-meta-simple">
-                          <h1>AngularJS - ng-bind - 筆記(3)</h1>
-                          <p>by <strong>Wei Liu (劉書瑋)</strong> &#8212; on <strong><time datetime="2017-01-03T22:30:00+08:00">03 Jan 2017</time></strong></p>
-                          <p class="notepad-post-meta-simple-tags">Tag: <a href="https://feegg333.github.io/tags/index.html#AngularJS" data-toggle="tooltip" title="Posts tagged with AngularJS" rel="tag">AngularJS</a> </p>
+                          <h1>使用 CSS 做出將溢出字元省略的效果 - 單行文字</h1>
+                          <p>by <strong>Wei Liu (劉書瑋)</strong> &#8212; on <strong><time datetime="2017-03-01T22:30:00+08:00">01 Mar 2017</time></strong></p>
+                          <p class="notepad-post-meta-simple-tags">Tag: <a href="https://feegg333.github.io/tags/index.html#CSS" data-toggle="tooltip" title="Posts tagged with CSS" rel="tag">CSS</a> </p>
                         </div>
                     </div>
                 </div>
             </header>
 
         <article class="notepad-post-content post tag-simple">
-            <div><p>AngularJS 除了使用雙大括號 {{}} 表達式來讓資料跟 Model 綁定之外 ，也可以使用 ng-bind 這個屬性來做到這個效果。
-主要的差異在於當我們在 html 的 tag 裡都是使用雙大括號表達式的時候， AngularJS 未載入完成或是載入失敗的時候，我們可能就會看到畫面上出現 {{expression}} 這樣的內容，雖然當 AngularJS 載入完成後， {{expression}} 會馬上變成要顯示的資料，但是我們可以直接透過 ng-bind 這個屬性來直接避免掉這樣的問題， 而且一樣可以在這個屬性裡直接做一些簡單的邏輯計算。</p>
+            <div><p>在設計網頁時，為了使畫面美觀，會先設計好每一個區塊的寬度，但是區塊內要放的文字長度常常並不是我們能預期的，要是碰到過長的文字，沒好好去處理，輕則從畫面上看起來句子被切掉了，重則讓畫面整個跑版或爆版，那事情可就大條了! </p>
 
-<p>使用的方法非常簡單，這次我們來做一個可以讓使用者輸入數量與單價，然後畫面上就會直接算出總價的小範例。</p>
+<p>為了防止這種情況發生，我們可以透過 CSS 的一些屬性來處理，當文字的長度超過所設定的寬度時，則會在最後面顯示 … 把多的字省略掉，這樣以後字再多也不怕了。</p>
 
-<p>做完的效果就如下所示：</p>
+<p>首先來看看字數太多又沒有好好處理導致爆版的情況，如下所示：</p>
 
 <div style="max-width:900px; margin:0 auto;">
-<iframe height="420" scrolling="no" title="AngularJS - Controller" src="//codepen.io/feegg333/embed/dNoygv/?height=420&amp;theme-id=0&amp;default-tab=result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/feegg333/pen/dNoygv/">AngularJS - ng-bind</a> by Wei (<a href="http://codepen.io/feegg333">@feegg333</a>) on <a href="http://codepen.io">CodePen</a>.
+<iframe height="320" scrolling="no" title="AngularJS - Controller" src="//codepen.io/feegg333/embed/Qpeavj/?height=320&amp;theme-id=0&amp;default-tab=result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/feegg333/pen/Qpeavj/">使用 CSS 將溢出字元省略 - 未處理前</a> by Wei (<a href="http://codepen.io/feegg333">@feegg333</a>) on <a href="http://codepen.io">CodePen</a>.
 </iframe>
 </div>
 
-<p>來看看怎麼做，首先準備好需要的 html 的內容，然後記得在 div 先加上 ng-app 屬性，程式碼如下：</p>
+<p>很明顯的可以看到圖片下面的說明文字已經整個跑出框框外面了，整個就是不及格啊!!</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well"</span> <span class="na">ng-app</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>ng-bind Demo<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Quantity:<span class="nt">&lt;/label&gt;</span>
-    <span class="c">&lt;!-- 第二步，在 input 標籤新增一個 ng-model 屬性，值給一個你想要的變數名稱 --&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">ng-model=</span><span class="s">"quantity"</span> <span class="na">placeholder=</span><span class="s">"Enter a number here"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;br/&gt;</span> <span class="nt">&lt;br/&gt;</span>
-    <span class="nt">&lt;label&gt;</span>Price:<span class="nt">&lt;/label&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">ng-model=</span><span class="s">"price"</span> <span class="na">placeholder=</span><span class="s">"Enter a number here"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;hr&gt;</span>
-    <span class="nt">&lt;span&gt;</span>總價為：<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span> {{quantity * price}}<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>元<span class="nt">&lt;/span&gt;</span>
+<p>再來是看看經過額外處理過後，把多的字元省略掉後的效果，如下所示：</p>
 
-<span class="nt">&lt;/div&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<div style="max-width:900px; margin:0 auto;">
+<iframe height="320" scrolling="no" title="AngularJS - Controller" src="//codepen.io/feegg333/embed/JWgyZZ/?height=320&amp;theme-id=0&amp;default-tab=result&amp;embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/feegg333/pen/JWgyZZ/">使用 CSS 將溢出字元省略 - 單行文字</a> by Wei (<a href="http://codepen.io/feegg333">@feegg333</a>) on <a href="http://codepen.io">CodePen</a>.
+</iframe>
+</div>
 
-<p>在 顯示計算後金額 的 span 部分，這次我們就不用原本的 AngularJS 表達式  {{quantity * price}} 來與 model 做資料繫結算出金額，而是使用 ng-bind 這個屬性，先幫這個 span 加上 ng-bind 的屬性，程式碼如下：</p>
+<p>超過設定寬度的字真的都被省略了，還自動出現了 … 來表示有字被省略掉，這種效果相信若是常逛網頁的人應該都有看過吧!</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;span&gt;</span>總價為：<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">ng-bind=</span><span class="s">""</span><span class="nt">&gt;&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>元<span class="nt">&lt;/span&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<p>接下來就來看看怎麼做到這個效果吧！</p>
 
-<p>把原本在雙括號表達式裡的內容：quantity * price，寫在 ng-bind 的屬性裡，這樣就完成了，但是只做到這樣的話，在還沒輸入任何數字之前，畫面上會直接顯示出 NaN，這是因為沒有設定預設值的關係，那…使用 ng-bind 的時候能跟使用表達式時一樣加上預設值嗎？其實用法跟表達式一樣，所以記得要加上預設值，以免畫面上出現 NaN。</p>
+<p>首先我們先準備好一個 div，來裝圖片跟文字，文字則額外再用另一個 div 包起來，HTML 的部份如下：</p>
 
-<p>加上預設值後的程式碼如下：</p>
+<p>```HTML</p>
+<div>
+  <img src="http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;w=1650&amp;sharp=30" />
+  <div>
+    具備劃時代Touch Bar 的MacBook Pro，有13 吋及15 吋機型可供選擇。立即深入了解全新功能並進行線上購買。
+  <div>
+<div>
+```
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1</pre></td><td class="code"><pre><span class="nt">&lt;span&gt;</span>總價為：<span class="nt">&lt;/span&gt;</span> <span class="nt">&lt;span</span> <span class="na">ng-bind=</span><span class="s">"quantity * price || '(未輸入金額與數量)'"</span><span class="nt">&gt;&lt;/span&gt;</span> <span class="nt">&lt;span&gt;</span>元<span class="nt">&lt;/span&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+接著就來設定樣式吧，首先設定最外層的容器，指定寬高，這邊我們設定區塊為寬 300px，高 250px，padding:3px，圖片則讓他撐到滿版寬度。
 
-<p>這樣範例就完成嘍，動手一起寫看看吧。</p>
+```CSS
+.main{
+  width:300px;
+  height:250px;
+  padding:3px;
+  border:1px solid #c8c8c8;
+}
+.pic{
+  width:100%;
+  height:auto;
+}
+```
 
-<p><a href="http://codepen.io/feegg333/pen/dNoygv" target="_blank" title="點此看程式碼範例">點此可以看完整程式碼範例</a></p>
+再來則是重點，要處理放文字的區塊，我們先設定文字區塊的寬度為 280px，這時候文字只要超過 280px 的長度，就會自動換行(區塊元素預設樣式行為)，所以設定寬度是很重要的喔! 接著設定 white-space: nowrap 屬性，讓文字長度超過設定的寬度時不會自動換行，設定 overflow: hidden 屬性使文字長度超過設定寬度時，會將溢出的字隱藏，再來是很重要的點點點，設定 text-overflow: ellipsis 屬性則會幫你帶出 ... 省略符號來當結尾，完整的 CSS 樣式如下：
+
+
+```CSS
+.main{
+  width:300px;
+  height:250px;
+  padding:3px;
+  border:1px solid #c8c8c8;
+}
+.pic{
+  width:100%;
+  height:auto;
+}
+.des{
+  width:280px;
+  font-size:16px;
+  margin:0 auto;
+  margin-top:10px;
+  font-family: 'Microsoft JhengHei','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  white-space: nowrap; /* 不自動換行 */
+  overflow: hidden; /* 隱藏溢出字元 */
+  text-overflow: ellipsis; /* 使用省略符號 ... */
+}
+```
+
+&gt; 小提醒： 要是使用非區塊元素，而是行內元素 (例如：span) 時，則要再加上 display : inline-block 屬性。
+
+現在就只要把設定好的 CSS 套用在之前準備好的 HTML 裡，就可以來看看結果啦! 套用樣式後的 HTML 如下：
+
+```HTML
+<div class="main">
+  <img class="pic" src="http://picjumbo.imgix.net/DSC02752.jpg?q=40&amp;w=1650&amp;sharp=30" />
+  <div class="des">
+    劃時代 Touch Bar 的 MacBook Pro，有13 吋及15 吋機型可供選擇。立即深入了解全新功能並進行線上購買。
+  <div>
+<div>
+```
+
+這樣就完成嘍，快點一起動手玩看看吧!!
+
+<a href="http://codepen.io/feegg333/pen/JWgyZZ" target="_blank" title="點此看程式碼範例">點此可以看完整程式碼範例</a>
+
+</div></div></div></div></div></div></div></div>
 
             </div>
         </article>
@@ -168,15 +206,15 @@
         <div class="cf"></div>
         <div class="row text-center">
             <section class="notepad-post-share">
-                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;AngularJS - ng-bind - 筆記(3)&quot;%20https://feegg333.github.io/2017/01/03/AngularJS-ng-bind/%20via%20&#64;"
+                <a class="twitter-icon" href="https://twitter.com/intent/tweet?text=&quot;使用 CSS 做出將溢出字元省略的效果 - 單行文字&quot;%20https://feegg333.github.io/2017/03/01/text-overflow-ellipsis-nowrap/%20via%20&#64;"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://feegg333.github.io/2017/01/03/AngularJS-ng-bind/"
+                <a class="facebook-icon" href="https://www.facebook.com/sharer/sharer.php?u=https://feegg333.github.io/2017/03/01/text-overflow-ellipsis-nowrap/"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
                     <i class="fa fa-facebook"></i>
                 </a>
-                <a class="google-icon" href="https://plus.google.com/share?url=https://feegg333.github.io/2017/01/03/AngularJS-ng-bind/"
+                <a class="google-icon" href="https://plus.google.com/share?url=https://feegg333.github.io/2017/03/01/text-overflow-ellipsis-nowrap/"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
                     <i class="fa fa-google-plus"></i>
                 </a>
@@ -187,10 +225,8 @@
 
         <div class="PageNavigation">
           
-            <a class="prev" href="/2017/01/02/AngularJS-Controller/">&laquo; AngularJS - Controller - 筆記(2)</a>
+            <a class="prev" href="/2017/01/03/AngularJS-ng-bind/">&laquo; AngularJS - ng-bind - 筆記(3)</a>
           
-          
-            <a class="next" href="/2017/03/01/text-overflow-ellipsis-nowrap/">使用 CSS 做出將溢出字元省略的效果 - 單行文字 &raquo;</a>
           
         </div>
 

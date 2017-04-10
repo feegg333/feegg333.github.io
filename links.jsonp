@@ -43,6 +43,11 @@ callback([
   {
     "text": "AngularJS - ng-bind - 筆記(3)",
     "href": "https://feegg333.github.io/2017/01/03/AngularJS-ng-bind/"
+  } ,
+
+  {
+    "text": "使用 CSS 做出將溢出字元省略的效果 - 單行文字",
+    "href": "https://feegg333.github.io/2017/03/01/text-overflow-ellipsis-nowrap/"
   } 
 
 ])
