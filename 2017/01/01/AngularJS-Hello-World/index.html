@@ -126,79 +126,119 @@
 
 <p>首先建立一個簡單的 html 。</p>
 
-<p>```HTML</p>
-
-<p>&lt;!doctype html&gt;</p>
-<html>
-<head>
-	<meta charset="UTF-8" />
-	<title>AngularJS</title>
-</head>
-<body>
-</body>
-</html>
-
-<p>```</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9</pre></td><td class="code"><pre><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>AngularJS<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>接著把 AngularJS 引用進來，為了讓樣式好看些，額外再引用了 bootstrap 的樣式。</p>
 
-<p>```HTML</p>
-
-<p>&lt;!doctype html&gt;</p>
-<html>
-<head>
-	<meta charset="UTF-8" />
-	<title>AngularJS</title>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
-</head>
-<body>
-</body>
-</html>
-
-<p>```</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="code"><pre><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>AngularJS<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>接著就是幫這個 html 標籤 加上 ng-app 的屬性，這樣做是讓 AngularJS 載入後知道要處理的範圍。</p>
 
-<p>```HTML
-&lt;!doctype html&gt;
-&lt;html ng-app&gt;</p>
-<head>
-	<meta charset="UTF-8" />
-	<title>AngularJS</title>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
-</head>
-<body>
-</body>
-<p>&lt;/html&gt;
-```</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td><td class="code"><pre><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">ng-app</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>AngularJS<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>再來把需要用到的 html 標籤補上去，簡單的內容如下：</p>
 
-<p>```HTML
-&lt;!doctype html&gt;
-&lt;html ng-app&gt;</p>
-<head>
-	<meta charset="UTF-8" />
-	<title>AngularJS</title>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
-</head>
-<body>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td class="code"><pre><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">ng-app</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>AngularJS<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
 
-<div class="well span6">
-		<label>Message</label>
-		<input type="text" placeholder="Enter a message here" />
-    <label>Name</label>
-		<input type="text" placeholder="Enter a name here" />
-		<hr />
-    <h1>Hello World!</h1>
-</div>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well span6"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;label&gt;</span>Message<span class="nt">&lt;/label&gt;</span>
+		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Enter a message here"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
+		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Enter a name here"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;hr&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello World!<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-</body>
-<p>&lt;/html&gt;
-```</p>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>接著就能利用 AngularJS 強大的 ng-model 來進行資料綁定的部分了，我們先幫 input 標籤加上 ng-model 的屬性，並且給這個屬性值，輸入 message 的 input 的 ng-model 屬性值就給他叫做 message, 而輸入 name 的 input 的 ng-model 屬性值就給叫做 name，這樣比較簡單易懂，而這邊的 ng-model 的屬性的值，就把它當成是你自己命名的變數名稱，而這個名稱就可以拿來對應再要綁定資料的地方。</p>
 
@@ -206,29 +246,48 @@
 
 <p>修改完後的程式碼如下：</p>
 
-<p>```HTML
-&lt;!doctype html&gt;
-&lt;html ng-app&gt;</p>
-<head>
-	<meta charset="UTF-8" />
-	<title>AngularJS</title>
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
-</head>
-<body>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></td><td class="code"><pre><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">ng-app</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>AngularJS<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
 
-<div class="well span6">
-		<label>Message</label>
-		<input type="text" ng-model="message" placeholder="Enter a message here" />
-    <label>Name</label>
-		<input type="text" ng-model="name" placeholder="Enter a name here" />
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well span6"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;label&gt;</span>Message<span class="nt">&lt;/label&gt;</span>
+		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">ng-model=</span><span class="s">"message"</span> <span class="na">placeholder=</span><span class="s">"Enter a message here"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
+		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">ng-model=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"Enter a name here"</span><span class="nt">&gt;</span>
 
-		<hr />
-<h1>{{message}} {{name}}</h1>
-	</div>
-</body>
-<p>&lt;/html&gt;
-```</p>
+		<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;h1&gt;</span>{{message}} {{name}}<span class="nt">&lt;/h1&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>做到這裡，在 message 的對話框輸入的內容，已經會綁定在 &lt;h1&gt; 標籤裡面的 {{message}}，而在 name 的對話框輸入的內容，已經會綁定在 &lt;h1&gt; 標籤裡面的 {{name}}。</p>
 
@@ -237,36 +296,62 @@
 <p>只要在 {{message}}中再加上 {{ message || “Hello” }}，這樣預設 h1 一開始就會顯示出 Hello 的字串，
 也幫 name 的部份加上預設值 {{ name || “World!” }}，這樣就完成了，完整程式碼如下：</p>
 
-<p>```HTML
-&lt;html ng-app&gt;</p>
-<head>
-	<meta charset="UTF-8" />
-	<title>AngularJS - Hello World!</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"></script>
-  <style>
-    body{
-      text-align:center;
-      color:#fff;
-    }
-    .well{
-  background-color:#333;
-}
-    </style>
-</head>
-<body>
-	<div class="well">
-		<label>Message</label>
-		<input type="text" ng-model="message" placeholder="Enter a message here" />
-    <label>Name</label>
-		<input type="text" ng-model="name" placeholder="Enter a name here" />
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></td><td class="code"><pre><span class="nt">&lt;html</span> <span class="na">ng-app</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;title&gt;</span>AngularJS - Hello World!<span class="nt">&lt;/title&gt;</span>
+	<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;style&gt;</span>
+    <span class="nt">body</span><span class="p">{</span>
+      <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+      <span class="nl">color</span><span class="p">:</span><span class="m">#fff</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nc">.well</span><span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span><span class="m">#333</span><span class="p">;</span>
+<span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;label&gt;</span>Message<span class="nt">&lt;/label&gt;</span>
+		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">ng-model=</span><span class="s">"message"</span> <span class="na">placeholder=</span><span class="s">"Enter a message here"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
+		<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">ng-model=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"Enter a name here"</span><span class="nt">&gt;</span>
 
-		<hr />
-<h1> {{ message || "Hello" }} {{ name || "World!" }}</h1>
-	</div>
-</body>
-<p>&lt;/html&gt;
-```</p>
+		<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;h1&gt;</span> {{ message || "Hello" }} {{ name || "World!" }}<span class="nt">&lt;/h1&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>運用 AngularJS 快速的就能做到資料綁定，快點一起試試看這個簡單的例子吧!</p>
 
