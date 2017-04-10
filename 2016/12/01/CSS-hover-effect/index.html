@@ -120,128 +120,70 @@
 
 <p>首先我們需要一個容器，這個容器會包著圖片以及文字的部分，接著再用一個容器裝文字，所以我們先做出這些容器。</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"adBorder"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;img&gt;</span>
-    <span class="c">&lt;!-- text --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"adTextContainer"</span><span class="nt">&gt;</span>
+<p>```HTML</p>
 
-    <span class="nt">&lt;/div&gt;</span>
+<div class="adBorder">
+<img />
+    <!-- text -->
+    <div class="adTextContainer">
 
-<span class="nt">&lt;/div&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+    </div>
+
+</div>
+
+<p>```</p>
 
 <p>接著把內容放進去，設定圖片來源，而文字的部分，使用 &lt;P&gt; 標籤，分別寫上標題、敘述內容以及來源。</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14</pre></td><td class="code"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"adBorder"</span><span class="nt">&gt;</span>
-      <span class="c">&lt;!-- img --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"adImgContainer"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"adImg"</span>  <span class="na">src=</span><span class="s">"https://i.ytimg.com/vi/V18tyItqJrw/maxresdefault.jpg"</span><span class="nt">&gt;</span>   
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="c">&lt;!-- text --&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"adTextContainer"</span><span class="nt">&gt;</span>
-     <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"adTitle"</span><span class="nt">&gt;</span> BMW 7 Series<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"adDes"</span><span class="nt">&gt;</span> The BMW 7 Series is a full-size luxury sedan produced by the German automaker BMW since 1977. It is the successor to the BMW E3 "New Six" sedan and is currently in its sixth generation.
-<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"adSponsored"</span><span class="nt">&gt;</span> Reference：WIKI<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
+<p>```HTML
+&lt;div class="adBorder"&gt;
+      <!-- img -->
+    &lt;div class="adImgContainer"&gt;
+      <img class="adImg" src="https://i.ytimg.com/vi/V18tyItqJrw/maxresdefault.jpg" /> <br />
+    &lt;/div&gt;
+    <!-- text -->
+    &lt;div class="adTextContainer"&gt;
+     &lt;p class="adTitle"&gt; BMW 7 Series&lt;/p&gt;
+      &lt;p class="adDes"&gt; The BMW 7 Series is a full-size luxury sedan produced by the German automaker BMW since 1977. It is the successor to the BMW E3 “New Six” sedan and is currently in its sixth generation.
+&lt;/p&gt;
+      &lt;p class="adSponsored"&gt; Reference：WIKI&lt;/p&gt;
+    &lt;/div&gt;</p>
 
-<span class="nt">&lt;/div&gt;</span><span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+<p>&lt;/div&gt;
+```</p>
 
 <p>HTML的部分就只需要這樣，接著就要使用 CSS 來調整樣式以及做出我們要的效果了。</p>
 
 <p>設定最外層的容器寬度與高度，並且設定 position:relative; 這樣到時文字的部分才可以設定相對位置來副蓋在圖片上。</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5</pre></td><td class="code"><pre>.adBorder{
+<p>```CSS</p>
+
+<p>.adBorder{
   width:520px;
   height:292px;
   position:relative;
-}<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+}</p>
+
+<p>```</p>
 
 <p>接著幫圖片設定寬高。</p>
 
-<figure class="highlight"><pre><code class="language-css3" data-lang="css3"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5</pre></td><td class="code"><pre>.adImg{
+<p>```CSS</p>
+
+<p>.adImg{
   border:0;
   width: 100%;
   height: 100%;
-}<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+}</p>
+
+<p>```</p>
 
 <p>接著設定文字部分的樣式，因為所有文字是放在同一個容器裡，因此我們先針對這個容器設定屬性，設定好 position:absolute; 並且設定 top:0px; left:0px; 固定好他與上層容器的相對位置，這時文字的容器就蓋在圖片上了。  background-color 使用 rgba 設定不透明度，這樣就能看到被蓋在後面的圖，因為要做滑鼠移到容器上才出現文字的部分，因此先把 opacity 設定成 0，再來就是利用 transition  的屬性設定屬性改變時的動畫效果，文字容器部分設定好之後，再幫標題、內容敘述等文字加上樣式。
 內容敘述的部分，因為有換行， text-align 設定 justify，可以讓文字排滿對齊，是個很好用的屬性。</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43</pre></td><td class="code"><pre>.adTextContainer{
+<p>```CSS</p>
+
+<p>.adTextContainer{
   position:absolute;
   top:0px;
   left:0px;
@@ -254,9 +196,9 @@
                       padding 0.3s linear;
   transition: opacity 0.8s,
               padding 0.3s linear;
-}
+}</p>
 
-.adTitle {
+<p>.adTitle {
   color:#000000;
   font-size: 26px;
   font-family: Helvetica;
@@ -265,46 +207,43 @@
   width: 70%;
   line-height: 30px;
   margin: 0px auto 0px auto;
-}
+}</p>
 
-.adDes{
+<p>.adDes{
   color:#333;
   text-align:justify;
   font-size:14px;
   font-family: Helvetica;
   margin: 20px auto 0 auto;
   width: 70%;
-}
+}</p>
 
-.adSponsored{
+<p>.adSponsored{
 color:#000;
 font-size: 13px;
 width: 70%;
 margin: 20px auto 63px auto;
 font-family: Helvetica;
 Helvetica;line-height:18px;
-}<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+}</p>
+
+<p>```</p>
 
 <p>接下來就是最後的步驟了，使用 hover 來設定滑鼠移到容器上面時改變屬性而做出動畫的效果，這邊設定為當滑鼠移到最上層的套用 adBorder 這個 class 的 div 時， img 會變模糊，如何使圖片變模糊呢? 只需要設定 filter: blur(3px) 即可。
 而這個時候，文字的區塊必須出現，因此 adTextContainer 這個 class 的 opacity 要調整為 1 ，再加上 padding-top 使位置變動，有文字向上浮動的效果。</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8</pre></td><td class="code"><pre>.adBorder:hover img {  
+<p>```CSS</p>
+
+<p>.adBorder:hover img {<br />
   -webkit-filter: blur(3px);
   filter: blur(3px);
 }
 .adBorder:hover .adTextContainer {
   padding-top:64px;
-  opacity: 1;  
-}<span class="w">
-</span></pre></td></tr></tbody></table></code></pre></figure>
+  opacity: 1;<br />
+}</p>
+
+<p>```</p>
 
 <p>不用寫任何的 javascript ，就能做到的效果，是不是迅速又方便呢?</p>
 
